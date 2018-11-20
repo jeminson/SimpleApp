@@ -14,6 +14,10 @@
 		A2A970DB21A491D0009BA1BA /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */; };
 		A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */; };
 		A2A970E021A495B0009BA1BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970DF21A495B0009BA1BA /* HomeViewController.swift */; };
+		A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E221A4982C009BA1BA /* FriendViewController.swift */; };
+		A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E521A49AB2009BA1BA /* UserViewController.swift */; };
+		A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E821A49B9E009BA1BA /* ChatViewController.swift */; };
+		A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970EB21A49C94009BA1BA /* SettingViewController.swift */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
 		A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		A2A970DF21A495B0009BA1BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A2A970E221A4982C009BA1BA /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		A2A970E521A49AB2009BA1BA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		A2A970E821A49B9E009BA1BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A2A970EB21A49C94009BA1BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +107,10 @@
 				A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */,
 				A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */,
 				A2A970DE21A49487009BA1BA /* Home */,
+				A2A970E121A49819009BA1BA /* Friend */,
+				A2A970E421A49AA2009BA1BA /* User */,
+				A2A970E721A49B90009BA1BA /* Chat */,
+				A2A970EA21A49C85009BA1BA /* Setting */,
 			);
 			path = LoggedIn;
 			sourceTree = "<group>";
@@ -109,6 +121,38 @@
 				A2A970DF21A495B0009BA1BA /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A2A970E121A49819009BA1BA /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				A2A970E221A4982C009BA1BA /* FriendViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		A2A970E421A49AA2009BA1BA /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A2A970E521A49AB2009BA1BA /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A2A970E721A49B90009BA1BA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A2A970E821A49B9E009BA1BA /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A2A970EA21A49C85009BA1BA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A2A970EB21A49C94009BA1BA /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		A2F9FD5921A47D7C001E08CD = {
@@ -293,13 +337,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F9FD7C21A47F53001E08CD /* Utility.swift in Sources */,
+				A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */,
+				A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */,
 				A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */,
 				A2F9FD7921A47DF7001E08CD /* MRKBaseViewController.swift in Sources */,
 				A2A970E021A495B0009BA1BA /* HomeViewController.swift in Sources */,
 				A2A970D821A48789009BA1BA /* SignUpTableViewCell.swift in Sources */,
 				A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */,
+				A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */,
 				A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
+				A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
