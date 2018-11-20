@@ -21,6 +21,11 @@ class SignInViewController: MRKBaseViewController {
         }
         
     }
+    @IBAction func signInActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "LoggedInViewController") as? LoggedInViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
 }
 

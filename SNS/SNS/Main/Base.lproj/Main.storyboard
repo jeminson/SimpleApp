@@ -58,6 +58,10 @@
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dY8-NG-L8X"/>
+                                    <segue destination="Zjh-mo-bHa" kind="presentation" id="r6L-ek-UlY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-rl-6W6">
                                 <rect key="frame" x="111" y="516" width="154" height="34"/>
@@ -94,13 +98,21 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
+        <!--LoggedInViewController-->
+        <scene sceneID="23M-cy-wnt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoggedInViewController" storyboardName="LoggedIn" referencedIdentifier="LoggedInViewController" id="Zjh-mo-bHa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgs-PK-WZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="132"/>
+        </scene>
         <!--SignUpViewController-->
         <scene sceneID="PiK-bA-FE7">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="SignUpViewController" storyboardName="SignUp" referencedIdentifier="SignUpViewController" id="aFy-RE-Cub" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mso-kI-Z0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1627" y="351"/>
+            <point key="canvasLocation" x="1744" y="171"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZHx-md-c5p">
