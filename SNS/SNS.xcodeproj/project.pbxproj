@@ -14,9 +14,13 @@
 		A2F9FD7021A47D7E001E08CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6E21A47D7E001E08CD /* LaunchScreen.storyboard */; };
 		A2F9FD7921A47DF7001E08CD /* MRKBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD7821A47DF7001E08CD /* MRKBaseViewController.swift */; };
 		A2F9FD7C21A47F53001E08CD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD7B21A47F53001E08CD /* Utility.swift */; };
+		B0A0254D55F8F58B0BCECA76 /* Pods_SNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17536D8BB136CEB63323A930 /* Pods_SNS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17536D8BB136CEB63323A930 /* Pods_SNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.release.xcconfig"; sourceTree = "<group>"; };
+		948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A0254D55F8F58B0BCECA76 /* Pods_SNS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272085C22988A8F5A00AD0BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */,
+				2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		28DF296FE4F2FC3ED2CD0EA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17536D8BB136CEB63323A930 /* Pods_SNS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2F9FD5921A47D7C001E08CD = {
 			isa = PBXGroup;
 			children = (
 				A2F9FD6421A47D7C001E08CD /* SNS */,
 				A2F9FD6321A47D7C001E08CD /* Products */,
+				272085C22988A8F5A00AD0BE /* Pods */,
+				28DF296FE4F2FC3ED2CD0EA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2F9FD7421A47D7E001E08CD /* Build configuration list for PBXNativeTarget "SNS" */;
 			buildPhases = (
+				156E29D2D94FF003F2BCC43E /* [CP] Check Pods Manifest.lock */,
 				A2F9FD5E21A47D7C001E08CD /* Sources */,
 				A2F9FD5F21A47D7C001E08CD /* Frameworks */,
 				A2F9FD6021A47D7C001E08CD /* Resources */,
+				E154B38CA597C72E82826F04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +177,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		156E29D2D94FF003F2BCC43E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E154B38CA597C72E82826F04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2F9FD5E21A47D7C001E08CD /* Sources */ = {
@@ -304,6 +383,7 @@
 		};
 		A2F9FD7521A47D7E001E08CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +403,7 @@
 		};
 		A2F9FD7621A47D7E001E08CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
