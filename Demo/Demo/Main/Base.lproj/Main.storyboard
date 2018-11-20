@@ -118,7 +118,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="LoggedInViewController" storyboardName="LoggedIn" referencedIdentifier="LoggedInViewController" id="bMm-hM-s8h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bk9-XL-bPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="256"/>
+            <point key="canvasLocation" x="2646" y="303"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="E4O-7o-7bS">
@@ -134,7 +134,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="SignUpViewController" storyboardName="SignUp" referencedIdentifier="SignUpViewController" id="RgH-T5-k7Y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0r-xQ-ldz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2637" y="392"/>
+            <point key="canvasLocation" x="2637" y="388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Uk-W8-Tur">

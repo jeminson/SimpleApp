@@ -20,6 +20,7 @@
 		A2F9FD4B21A3F671001E08CD /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD4A21A3F671001E08CD /* ForgotPasswordViewController.swift */; };
 		A2F9FD4E21A3FAB7001E08CD /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD4D21A3FAB7001E08CD /* LoggedIn.storyboard */; };
 		A2F9FD5021A3FACF001E08CD /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD4F21A3FACF001E08CD /* LoggedInViewController.swift */; };
+		A2F9FD5221A453D9001E08CD /* LoggedInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD5121A453D9001E08CD /* LoggedInTableViewCell.swift */; };
 		FDBAF33AD44899836018F06C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0203E7E041ECF9FEEF20AC32 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		A2F9FD4A21A3F671001E08CD /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A2F9FD4D21A3FAB7001E08CD /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
 		A2F9FD4F21A3FACF001E08CD /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		A2F9FD5121A453D9001E08CD /* LoggedInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInTableViewCell.swift; sourceTree = "<group>"; };
 		BA32D6A64E10BB8C7EA1A3F3 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA92986FDA36FD02000E9395 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			children = (
 				A2F9FD4D21A3FAB7001E08CD /* LoggedIn.storyboard */,
 				A2F9FD4F21A3FACF001E08CD /* LoggedInViewController.swift */,
+				A2F9FD5121A453D9001E08CD /* LoggedInTableViewCell.swift */,
 			);
 			path = LoggedIn;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				A2F9FD2421A3B99D001E08CD /* SignInViewController.swift in Sources */,
 				A2F9FD4B21A3F671001E08CD /* ForgotPasswordViewController.swift in Sources */,
 				A2F9FD2221A3B99D001E08CD /* AppDelegate.swift in Sources */,
+				A2F9FD5221A453D9001E08CD /* LoggedInTableViewCell.swift in Sources */,
 				A2F9FD5021A3FACF001E08CD /* LoggedInViewController.swift in Sources */,
 				A2F9FD4021A3C8B6001E08CD /* SignUpViewController.swift in Sources */,
 				A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */,

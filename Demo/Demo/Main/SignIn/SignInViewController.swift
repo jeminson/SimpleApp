@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import TWMessageBarManager
 
-class SignInViewController: UIViewController {
+class SignInViewController: MRKBaseViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
