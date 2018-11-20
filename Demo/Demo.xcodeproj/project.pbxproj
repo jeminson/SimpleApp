@@ -15,7 +15,6 @@
 		A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD3621A3BD0B001E08CD /* Utility.swift */; };
 		A2F9FD3E21A3C8A5001E08CD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD3D21A3C8A5001E08CD /* SignUp.storyboard */; };
 		A2F9FD4021A3C8B6001E08CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */; };
-		A2F9FD4221A3CFAD001E08CD /* SignUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD4121A3CFAD001E08CD /* SignUpTableViewCell.swift */; };
 		A2F9FD4421A3DEA9001E08CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD4321A3DEA9001E08CD /* GoogleService-Info.plist */; };
 		FDBAF33AD44899836018F06C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0203E7E041ECF9FEEF20AC32 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +31,6 @@
 		A2F9FD3621A3BD0B001E08CD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A2F9FD3D21A3C8A5001E08CD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		A2F9FD4121A3CFAD001E08CD /* SignUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewCell.swift; sourceTree = "<group>"; };
 		A2F9FD4321A3DEA9001E08CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA32D6A64E10BB8C7EA1A3F3 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA92986FDA36FD02000E9395 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			children = (
 				A2F9FD3D21A3C8A5001E08CD /* SignUp.storyboard */,
 				A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */,
-				A2F9FD4121A3CFAD001E08CD /* SignUpTableViewCell.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -237,14 +234,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/TWMessageBarManager/TWMessageBarManager.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TWMessageBarManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +266,6 @@
 				A2F9FD2221A3B99D001E08CD /* AppDelegate.swift in Sources */,
 				A2F9FD4021A3C8B6001E08CD /* SignUpViewController.swift in Sources */,
 				A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */,
-				A2F9FD4221A3CFAD001E08CD /* SignUpTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
