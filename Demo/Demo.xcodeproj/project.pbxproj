@@ -16,6 +16,8 @@
 		A2F9FD3E21A3C8A5001E08CD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD3D21A3C8A5001E08CD /* SignUp.storyboard */; };
 		A2F9FD4021A3C8B6001E08CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */; };
 		A2F9FD4421A3DEA9001E08CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD4321A3DEA9001E08CD /* GoogleService-Info.plist */; };
+		A2F9FD4921A3F64F001E08CD /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD4821A3F64F001E08CD /* ForgotPassword.storyboard */; };
+		A2F9FD4B21A3F671001E08CD /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD4A21A3F671001E08CD /* ForgotPasswordViewController.swift */; };
 		FDBAF33AD44899836018F06C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0203E7E041ECF9FEEF20AC32 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		A2F9FD3D21A3C8A5001E08CD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A2F9FD4321A3DEA9001E08CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2F9FD4821A3F64F001E08CD /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		A2F9FD4A21A3F671001E08CD /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		BA32D6A64E10BB8C7EA1A3F3 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DA92986FDA36FD02000E9395 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 				A2F9FD2521A3B99D001E08CD /* Main.storyboard */,
 				A2F9FD3421A3BA9C001E08CD /* SignIn */,
 				A2F9FD3821A3C65D001E08CD /* SignUp */,
+				A2F9FD4721A3F633001E08CD /* ForgotPassword */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -121,6 +126,15 @@
 				A2F9FD3F21A3C8B6001E08CD /* SignUpViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A2F9FD4721A3F633001E08CD /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				A2F9FD4821A3F64F001E08CD /* ForgotPassword.storyboard */,
+				A2F9FD4A21A3F671001E08CD /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		F8C168B996F35B77CC96B10B /* Pods */ = {
@@ -196,6 +210,7 @@
 				A2F9FD2921A3B99E001E08CD /* Assets.xcassets in Resources */,
 				A2F9FD4421A3DEA9001E08CD /* GoogleService-Info.plist in Resources */,
 				A2F9FD3E21A3C8A5001E08CD /* SignUp.storyboard in Resources */,
+				A2F9FD4921A3F64F001E08CD /* ForgotPassword.storyboard in Resources */,
 				A2F9FD2721A3B99D001E08CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F9FD2421A3B99D001E08CD /* SignInViewController.swift in Sources */,
+				A2F9FD4B21A3F671001E08CD /* ForgotPasswordViewController.swift in Sources */,
 				A2F9FD2221A3B99D001E08CD /* AppDelegate.swift in Sources */,
 				A2F9FD4021A3C8B6001E08CD /* SignUpViewController.swift in Sources */,
 				A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */,

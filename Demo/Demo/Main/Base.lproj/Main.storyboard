@@ -74,6 +74,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bb-WZ-Ld7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTm-Kl-PtJ">
                                 <rect key="frame" x="77" y="594" width="221" height="33"/>
@@ -101,6 +104,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010.4000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--ForgotPasswordViewController-->
+        <scene sceneID="E4O-7o-7bS">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ForgotPasswordViewController" storyboardName="ForgotPassword" referencedIdentifier="ForgotPasswordViewController" id="p5k-8T-yjC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15d-K9-f4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="346"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="8Xf-pW-hAw">
