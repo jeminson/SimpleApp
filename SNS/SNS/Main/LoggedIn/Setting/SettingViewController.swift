@@ -18,5 +18,10 @@ class SettingViewController: MRKBaseViewController {
     
 
 
-
+    @IBAction func logoutActionButton(_ sender: UIButton) {
+        let mainStoreBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = mainStoreBoard.instantiateViewController(withIdentifier: "SignInViewController")
+        UIApplication.shared.keyWindow?.rootViewController = controller
+    }
+    
 }
