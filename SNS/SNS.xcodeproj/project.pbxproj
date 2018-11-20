@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2A970D021A48288009BA1BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* MainViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		17536D8BB136CEB63323A930 /* Pods_SNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				A2F9FD6C21A47D7E001E08CD /* Assets.xcassets */,
 				A2F9FD6E21A47D7E001E08CD /* LaunchScreen.storyboard */,
 				A2F9FD7121A47D7E001E08CD /* Info.plist */,
+				A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */,
 			);
 			path = SNS;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F9FD7021A47D7E001E08CD /* LaunchScreen.storyboard in Resources */,
+				A2A970D021A48288009BA1BA /* GoogleService-Info.plist in Resources */,
 				A2F9FD6D21A47D7E001E08CD /* Assets.xcassets in Resources */,
 				A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */,
 			);
