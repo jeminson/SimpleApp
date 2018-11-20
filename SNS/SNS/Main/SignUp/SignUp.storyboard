@@ -17,7 +17,18 @@
                     <view key="view" contentMode="scaleToFill" id="IiS-Kl-uO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="KvL-3z-cFb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KvL-3z-cFb" firstAttribute="bottom" secondItem="c6c-Ai-gai" secondAttribute="bottom" id="DDA-vS-lKd"/>
+                            <constraint firstItem="KvL-3z-cFb" firstAttribute="trailing" secondItem="c6c-Ai-gai" secondAttribute="trailing" id="Gyg-DG-Kbm"/>
+                            <constraint firstItem="KvL-3z-cFb" firstAttribute="top" secondItem="IiS-Kl-uO8" secondAttribute="top" id="UYn-lb-tp6"/>
+                            <constraint firstItem="KvL-3z-cFb" firstAttribute="leading" secondItem="c6c-Ai-gai" secondAttribute="leading" id="Zjw-yR-ptv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c6c-Ai-gai"/>
                     </view>
                     <navigationItem key="navigationItem" id="aa1-fn-aG6"/>
@@ -45,4 +56,7 @@
             <point key="canvasLocation" x="376.80000000000001" y="-207.34632683658174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1" width="375" height="667"/>
+    </resources>
 </document>
