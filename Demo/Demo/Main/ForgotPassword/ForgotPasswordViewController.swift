@@ -12,6 +12,12 @@ import TWMessageBarManager
 
 class ForgotPasswordViewController: UIViewController {
 
+    @IBAction func userNameTextField(_ sender: Any) {
+    }
+    
+    @IBAction func passwordTextField(_ sender: UITextField) {
+    }
+    
     @IBOutlet weak var emailIDTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -66,6 +66,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UP-4K-og3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgU-IS-Nfy">
                                 <rect key="frame" x="117" y="553" width="141" height="33"/>
@@ -100,10 +103,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="lKm-IT-eF2"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="jgE-KX-d88" id="IPh-fB-8CH"/>
+                        <outlet property="usernameTextField" destination="qvO-jQ-uOi" id="6Cn-L7-RPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010.4000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--LoggedInViewController-->
+        <scene sceneID="8rZ-dp-0mv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoggedInViewController" storyboardName="LoggedIn" referencedIdentifier="LoggedInViewController" id="bMm-hM-s8h" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bk9-XL-bPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="256"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="E4O-7o-7bS">

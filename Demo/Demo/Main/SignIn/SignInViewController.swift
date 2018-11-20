@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import TWMessageBarManager
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,5 +37,31 @@ class SignInViewController: UIViewController {
         }
     }
     
+    @IBAction func signInActionButton(_ sender: UIButton) {
+        signIn(email:self.usernameTextField.text!, passwd:self.passwordTextField.text!)
+    }
+    
+    
+    
 }
 
+extension SignInViewController {
+    func signIn(email:String, passwd:String)  {
+        
+        Auth.auth().signIn(withEmail: email, password: passwd) { (result, error) in
+            
+            if error == nil{
+                guard let user = result?.user else { return }
+                
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "LoggedInViewController") as? LoggedInViewController {
+                    self.navigationController?.pushViewController(controller, animated: true)
+                }
+                
+            }else{
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                //  print(error?.localizedDescription)
+            }
+            
+        }
+    }
+}
