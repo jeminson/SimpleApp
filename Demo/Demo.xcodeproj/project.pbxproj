@@ -12,6 +12,7 @@
 		A2F9FD2721A3B99D001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD2521A3B99D001E08CD /* Main.storyboard */; };
 		A2F9FD2921A3B99E001E08CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD2821A3B99E001E08CD /* Assets.xcassets */; };
 		A2F9FD2C21A3B99E001E08CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD2A21A3B99E001E08CD /* LaunchScreen.storyboard */; };
+		A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD3621A3BD0B001E08CD /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A2F9FD2821A3B99E001E08CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F9FD2B21A3B99E001E08CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2F9FD2D21A3B99E001E08CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2F9FD3621A3BD0B001E08CD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A2F9FD2121A3B99D001E08CD /* AppDelegate.swift */,
 				A2F9FD2A21A3B99E001E08CD /* LaunchScreen.storyboard */,
 				A2F9FD3321A3B9E2001E08CD /* Main */,
+				A2F9FD3521A3BCEF001E08CD /* Utility */,
 				A2F9FD2821A3B99E001E08CD /* Assets.xcassets */,
 				A2F9FD2D21A3B99E001E08CD /* Info.plist */,
 			);
@@ -78,6 +81,14 @@
 				A2F9FD2321A3B99D001E08CD /* SignInViewController.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A2F9FD3521A3BCEF001E08CD /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A2F9FD3621A3BD0B001E08CD /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 			files = (
 				A2F9FD2421A3B99D001E08CD /* SignInViewController.swift in Sources */,
 				A2F9FD2221A3B99D001E08CD /* AppDelegate.swift in Sources */,
+				A2F9FD3721A3BD0B001E08CD /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
