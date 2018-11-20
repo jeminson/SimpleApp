@@ -70,6 +70,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmT-X9-frz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpJ-j3-NTx">
                                 <rect key="frame" x="73" y="558" width="230" height="33"/>
@@ -106,13 +109,21 @@
             </objects>
             <point key="canvasLocation" x="1754" y="132"/>
         </scene>
+        <!--ForgotPasswordViewController-->
+        <scene sceneID="ouS-7M-98g">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ForgotPasswordViewController" storyboardName="ForgotPassword" referencedIdentifier="ForgotPasswordViewController" id="M4Y-YB-FA2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfV-Kc-Ts7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="264"/>
+        </scene>
         <!--SignUpViewController-->
         <scene sceneID="PiK-bA-FE7">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="SignUpViewController" storyboardName="SignUp" referencedIdentifier="SignUpViewController" id="aFy-RE-Cub" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mso-kI-Z0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744" y="173"/>
+            <point key="canvasLocation" x="1744" y="299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZHx-md-c5p">

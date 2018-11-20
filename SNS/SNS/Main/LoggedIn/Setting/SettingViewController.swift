@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TWMessageBarManager
 
 class SettingViewController: MRKBaseViewController {
 
@@ -22,6 +23,8 @@ class SettingViewController: MRKBaseViewController {
         let mainStoreBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = mainStoreBoard.instantiateViewController(withIdentifier: "SignInViewController")
         UIApplication.shared.keyWindow?.rootViewController = controller
+        
+        TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully logged out", type: .success)
     }
     
 }

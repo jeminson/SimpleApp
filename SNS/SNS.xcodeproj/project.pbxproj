@@ -18,6 +18,8 @@
 		A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E521A49AB2009BA1BA /* UserViewController.swift */; };
 		A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E821A49B9E009BA1BA /* ChatViewController.swift */; };
 		A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970EB21A49C94009BA1BA /* SettingViewController.swift */; };
+		A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */; };
+		A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		A2A970E521A49AB2009BA1BA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A2A970E821A49B9E009BA1BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A2A970EB21A49C94009BA1BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,15 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		A2A970ED21A4A459009BA1BA /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */,
+				A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		A2F9FD5921A47D7C001E08CD = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,7 @@
 				A2F9FD6921A47D7C001E08CD /* Main.storyboard */,
 				A2A970D121A48522009BA1BA /* SignIn */,
 				A2A970D221A48552009BA1BA /* SignUp */,
+				A2A970ED21A4A459009BA1BA /* ForgotPassword */,
 				A2A970D921A491BC009BA1BA /* LoggedIn */,
 			);
 			path = Main;
@@ -272,6 +286,7 @@
 				A2F9FD6D21A47D7E001E08CD /* Assets.xcassets in Resources */,
 				A2A970DB21A491D0009BA1BA /* LoggedIn.storyboard in Resources */,
 				A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */,
+				A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */,
 				A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +327,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/TWMessageBarManager/TWMessageBarManager.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -321,6 +337,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TWMessageBarManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -346,6 +363,7 @@
 				A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */,
 				A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */,
 				A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */,
+				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
 				A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */,
 			);

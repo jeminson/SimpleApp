@@ -27,6 +27,11 @@ class SignInViewController: MRKBaseViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
+    @IBAction func forgotPasswordActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
 }
 
