@@ -1,0 +1,26 @@
+//
+//  ViewController.swift
+//  SNS
+//
+//  Created by Je Min Son on 11/20/18.
+//  Copyright © 2018 Jason Son. All rights reserved.
+//
+
+import UIKit
+
+class SignInViewController: MRKBaseViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+
+    @IBAction func signUpActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        
+    }
+    
+}
+
