@@ -24,6 +24,34 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RdI-4T-SG1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="9es-Nc-dcK">
+                                    <rect key="frame" x="0.0" y="83" width="375" height="69"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-mn-ytg">
+                                            <rect key="frame" x="8" y="8" width="359" height="53"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <state key="normal" title="SUBMIT">
+                                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="ViewCorner">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NrT-mn-ytg" secondAttribute="trailing" constant="8" id="CJ0-pt-vHI"/>
+                                        <constraint firstItem="NrT-mn-ytg" firstAttribute="top" secondItem="9es-Nc-dcK" secondAttribute="top" constant="8" id="FDT-i8-PT0"/>
+                                        <constraint firstItem="NrT-mn-ytg" firstAttribute="centerX" secondItem="9es-Nc-dcK" secondAttribute="centerX" id="bau-q8-R1R"/>
+                                        <constraint firstItem="NrT-mn-ytg" firstAttribute="centerY" secondItem="9es-Nc-dcK" secondAttribute="centerY" id="eqI-eE-39o"/>
+                                        <constraint firstItem="NrT-mn-ytg" firstAttribute="leading" secondItem="9es-Nc-dcK" secondAttribute="leading" constant="8" id="toF-2b-EOi"/>
+                                        <constraint firstAttribute="bottom" secondItem="NrT-mn-ytg" secondAttribute="bottom" constant="8" id="wJB-4f-dgC"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SignUpTableViewCell" rowHeight="55" id="Kx0-Al-r0t" customClass="SignUpTableViewCell" customModule="SNS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
