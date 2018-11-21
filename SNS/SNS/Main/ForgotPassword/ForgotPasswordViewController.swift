@@ -10,13 +10,23 @@ import UIKit
 
 class ForgotPasswordViewController: MRKBaseViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
             title = "Forgot Password"
     }
     
-
-
+    
+    @IBAction func submitActionButton(_ sender: UIButton) {
+    
+        if usernameTextField.text != nil {
+            FirebaseAPIHandler.sharedInstance.resetPassword(email: usernameTextField.text!)
+        }
+        
+        
+    }
+    
 
 }

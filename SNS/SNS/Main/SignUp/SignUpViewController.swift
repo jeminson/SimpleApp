@@ -38,10 +38,12 @@ class SignUpViewController: MRKBaseViewController {
         view.endEditing(true)
         
         if let obj = userInfo {
-            if let fName = obj.firstName, let _ = obj.lastName, let emailString = obj.emailId, let _ = obj.address, let _ = obj.phoneNumber, let pwString = obj.password {
+            if let fName = obj.firstName, let lName = obj.lastName, let emailString = obj.emailId, let add = obj.address, let phoneNum = obj.phoneNumber, let pwString = obj.password {
                 delegate?.saveUserInfo(object: obj, editUserInfo: isEdit)
                 
-                FirebaseAPIHandler.sharedInstance.signUp(email: emailString, passwd: pwString, firstName: fName)
+                
+                FirebaseAPIHandler.sharedInstance.signUp(email: emailString, passwd: pwString, firstName: fName, lastName: lName, address: add, phoneNumber: phoneNum)
+
             }
         }
         

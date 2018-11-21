@@ -14,7 +14,7 @@ import TWMessageBarManager
 typealias completionHandler = (Any?, Error?) ->()
 
 class FirebaseAPIHandler: NSObject {
-    // Singleton class
+    // MARK: - Singleton class
     static let sharedInstance = FirebaseAPIHandler()
     private override init() {}
     
@@ -24,20 +24,18 @@ class FirebaseAPIHandler: NSObject {
 }
 
 extension FirebaseAPIHandler {
-    
-    func signUp(email:String, passwd:String, firstName:String)  {
+    func signUp(email:String, passwd:String, firstName:String, lastName: String, address: String, phoneNumber: String)  {
         
         Auth.auth().createUser(withEmail: email, password: passwd) { (result, error) in
             
             if error == nil{
                 guard let user = result?.user else { return }
                 
-                self.databaseRef.child(user.uid).setValue(["ID":user.uid, "FirstName": firstName, "EmailId":email], withCompletionBlock: { (error, ref) in
+                self.databaseRef.child(user.uid).setValue(["ID":user.uid, "EmailId":email, "FirstName": firstName, "LastName": lastName, "Address": address, "Phone Number": phoneNumber], withCompletionBlock: { (error, ref) in
                     
                     if error == nil{
                         print(ref)
                     }
-                    
                 })
                 
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
@@ -46,6 +44,17 @@ extension FirebaseAPIHandler {
             }
             
         }
-    }
+    } // End signUp func
+    
+    func resetPassword(email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if error == nil {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Reset", description: "Sent to your email", type: .info)
+            } else {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+            }
+        }
+    } // End resetPassword func
+    
 
 }
