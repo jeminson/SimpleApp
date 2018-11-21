@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import TWMessageBarManager
 
-typealias completionHandler = (Any?, Error?) ->()
+//typealias completionHandler = (Any?, Error?) ->()
 
 class FirebaseAPIHandler: NSObject {
     // MARK: - Singleton class
@@ -22,20 +22,24 @@ class FirebaseAPIHandler: NSObject {
 }
 
 extension FirebaseAPIHandler {
-    func signUp(completion:@escaping completionHandler)  {
-        
-        let userInfo = UserInfo()
+    func signUp(userInfo: UserInfo) {
         
         Auth.auth().createUser(withEmail: userInfo.emailId!, password: userInfo.password!) { (result, error) in
-            
-            if error == nil{
-                guard let user = result?.user else { return }
+            if error == nil {
+
+                guard let user = result?.user else {return}
                 
-                self.databaseRef.child(user.uid).setValue(["ID": user.uid, "First Name": userInfo.firstName])
-                
-                
+                self.databaseRef.child(user.uid).setValue(["ID":user.uid, "EmailId":userInfo.emailId!, "FirstName": userInfo.firstName!, "LastName": userInfo.lastName!, "Address": userInfo.address!, "Phone Number": userInfo.phoneNumber!], withCompletionBlock: { (error, ref) in
+                    
+                    if error == nil {
+                        print(ref)
+                    }
+                })
+
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
+            } else {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
             }
-            
         }
     } // End signUp func
     
