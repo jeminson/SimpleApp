@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SNS/Main/FirebaseAPIHandler.swift"
+            timestampString = "564471242.162014"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "signUp(email:passwd:firstName:lastName:address:phoneNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SNS/Main/FirebaseAPIHandler.swift"
+            timestampString = "564471242.162387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "signUp(email:passwd:firstName:lastName:address:phoneNumber:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SNS.FirebaseAPIHandler.signUp(email: Swift.String, passwd: Swift.String, firstName: Swift.String, lastName: Swift.String, address: Swift.String, phoneNumber: Swift.String) -&gt; ()"
+                  moduleName = "SNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeminson/Documents/Developer/iOS/SimpleApp/SNS/SNS/Main/FirebaseAPIHandler.swift"
+                  timestampString = "564471242.2835881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SNS.FirebaseAPIHandler.signUp(email: Swift.String, passwd: Swift.String, firstName: Swift.String, lastName: Swift.String, address: Swift.String, phoneNumber: Swift.String) -&gt; ()"
+                  moduleName = "SNS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeminson/Documents/Developer/iOS/SimpleApp/SNS/SNS/Main/FirebaseAPIHandler.swift"
+                  timestampString = "564471242.285866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "141">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
