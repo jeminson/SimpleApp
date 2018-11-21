@@ -9,7 +9,10 @@
 import UIKit
 
 class SignInViewController: MRKBaseViewController {
-
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,12 +23,9 @@ class SignInViewController: MRKBaseViewController {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
-        
     }
     @IBAction func signInActionButton(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "LoggedInViewController") as? LoggedInViewController {
-            self.navigationController?.pushViewController(controller, animated: true)
-        }
+//        FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!)
     }
     @IBAction func forgotPasswordActionButton(_ sender: UIButton) {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
