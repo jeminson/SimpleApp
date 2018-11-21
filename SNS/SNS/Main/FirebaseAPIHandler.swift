@@ -22,23 +22,18 @@ class FirebaseAPIHandler: NSObject {
 }
 
 extension FirebaseAPIHandler {
-    func signUp(email:String, passwd:String, firstName:String, lastName: String, address: String, phoneNumber: String)  {
+    func signUp(completion:@escaping completionHandler)  {
         
-        Auth.auth().createUser(withEmail: email, password: passwd) { (result, error) in
+        let userInfo = UserInfo()
+        
+        Auth.auth().createUser(withEmail: userInfo.emailId!, password: userInfo.password!) { (result, error) in
             
             if error == nil{
                 guard let user = result?.user else { return }
                 
-                self.databaseRef.child(user.uid).setValue(["ID":user.uid, "EmailId":email, "FirstName": firstName, "LastName": lastName, "Address": address, "Phone Number": phoneNumber], withCompletionBlock: { (error, ref) in
-                    
-                    if error == nil{
-                        print(ref)
-                    }
-                })
+                self.databaseRef.child(user.uid).setValue(["ID": user.uid, "First Name": userInfo.firstName])
                 
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
-            }else{
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                
             }
             
         }
