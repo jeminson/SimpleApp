@@ -18,7 +18,20 @@ class SettingViewController: MRKBaseViewController {
     }
     
 
-
+    @IBAction func editUserActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "EditUserViewController") as? EditUserViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
+    @IBAction func resetPasswordActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordViewController") as? ResetPasswordViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
+    
+    
     @IBAction func logoutActionButton(_ sender: UIButton) {
         let mainStoreBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = mainStoreBoard.instantiateViewController(withIdentifier: "SignInViewController")

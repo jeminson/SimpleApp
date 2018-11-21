@@ -53,19 +53,24 @@ extension FirebaseAPIHandler {
         }
     } // End resetPassword func
     
-    func signIn(email: String, passwd: String) {
-        
+    func signIn(email: String, passwd: String) -> Bool {
+        var isBool = false
+    
         Auth.auth().signIn(withEmail: email, password: passwd) { (result, error) in
             if error == nil {
                 guard let user = result?.user else {return}
 
-                print(user)
+                isBool = true
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
+                print(isBool)
             } else {
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                print("Should be false \(isBool)")
             }
         }
-        
+    
+        print("isBool is \(isBool)")
+        return isBool 
     } // End signIn func
     
 

@@ -22,6 +22,10 @@
 		A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */; };
 		A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */; };
 		A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F421A4ACE5009BA1BA /* UserInfo.swift */; };
+		A2A970F821A54276009BA1BA /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F721A54276009BA1BA /* EditUserViewController.swift */; };
+		A2A9710021A54420009BA1BA /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */; };
+		A2A9710421A548E5009BA1BA /* EditUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A9710321A548E5009BA1BA /* EditUser.storyboard */; };
+		A2A9710621A5490A009BA1BA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -51,6 +55,10 @@
 		A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIHandler.swift; sourceTree = "<group>"; };
 		A2A970F421A4ACE5009BA1BA /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		A2A970F721A54276009BA1BA /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		A2A9710321A548E5009BA1BA /* EditUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUser.storyboard; sourceTree = "<group>"; };
+		A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				A2A970EB21A49C94009BA1BA /* SettingViewController.swift */,
+				A2A970F621A54258009BA1BA /* EditUser */,
+				A2A970FC21A543FA009BA1BA /* ResetPassword */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -170,6 +180,24 @@
 				A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */,
 			);
 			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		A2A970F621A54258009BA1BA /* EditUser */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9710321A548E5009BA1BA /* EditUser.storyboard */,
+				A2A970F721A54276009BA1BA /* EditUserViewController.swift */,
+			);
+			path = EditUser;
+			sourceTree = "<group>";
+		};
+		A2A970FC21A543FA009BA1BA /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */,
+				A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		A2F9FD5921A47D7C001E08CD = {
@@ -294,6 +322,8 @@
 				A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */,
 				A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */,
 				A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */,
+				A2A9710421A548E5009BA1BA /* EditUser.storyboard in Resources */,
+				A2A9710621A5490A009BA1BA /* ResetPassword.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +391,7 @@
 			files = (
 				A2F9FD7C21A47F53001E08CD /* Utility.swift in Sources */,
 				A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */,
+				A2A9710021A54420009BA1BA /* ResetPasswordViewController.swift in Sources */,
 				A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */,
 				A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */,
 				A2F9FD7921A47DF7001E08CD /* MRKBaseViewController.swift in Sources */,
@@ -370,6 +401,7 @@
 				A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */,
 				A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */,
 				A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */,
+				A2A970F821A54276009BA1BA /* EditUserViewController.swift in Sources */,
 				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
 				A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */,

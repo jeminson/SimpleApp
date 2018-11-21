@@ -25,7 +25,7 @@ class SignInViewController: MRKBaseViewController {
         }
     }
     @IBAction func signInActionButton(_ sender: UIButton) {
-//        FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!)
+        FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!)
     }
     @IBAction func forgotPasswordActionButton(_ sender: UIButton) {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {

@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoq-sJ-2La" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8015.1999999999998" y="-218.1409295352324"/>
+            <point key="canvasLocation" x="8954.3999999999996" y="-218.1409295352324"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="1N8-N2-lVK">
@@ -137,6 +137,40 @@
                                     <action selector="logoutActionButton:" destination="e0J-CI-CEa" eventType="touchUpInside" id="8Tk-b0-lLU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bn-y3-H2r">
+                                <rect key="frame" x="16" y="85" width="343" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Edit User">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ViewCorner">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editUserActionButton:" destination="e0J-CI-CEa" eventType="touchUpInside" id="VL6-vt-0wQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suo-9I-o4I">
+                                <rect key="frame" x="16" y="146" width="343" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ViewCorner">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetPasswordActionButton:" destination="e0J-CI-CEa" eventType="touchUpInside" id="013-hZ-YlY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -152,6 +186,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZw-uu-s0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4541.6000000000004" y="336.88155922038982"/>
+        </scene>
+        <!--EditUserViewController-->
+        <scene sceneID="6Eu-Fg-GbT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EditUserViewController" storyboardName="EditUser" referencedIdentifier="EditUserViewController" id="Pzy-e0-g1U" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQW-eM-wJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5156" y="116"/>
+        </scene>
+        <!--ResetPasswordViewController-->
+        <scene sceneID="hE0-U2-4FT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ResetPasswordViewController" storyboardName="ResetPassword" referencedIdentifier="ResetPasswordViewController" id="biJ-X7-Z99" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWl-0L-f3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5188" y="153"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="d6W-rh-Ywg">
@@ -256,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ov-LS-rLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7228" y="-218.1409295352324"/>
+            <point key="canvasLocation" x="8167.1999999999998" y="-218.1409295352324"/>
         </scene>
         <!--Chat-->
         <scene sceneID="Efc-ji-yI7">
