@@ -42,7 +42,7 @@ class SignUpViewController: MRKBaseViewController {
                 delegate?.saveUserInfo(object: obj, editUserInfo: isEdit)
                 
                 
-                FirebaseAPIHandler.sharedInstance.signUp(email: emailString, passwd: pwString, firstName: fName, lastName: lName, address: add, phoneNumber: phoneNum)
+//                FirebaseAPIHandler.sharedInstance.signUp(email: emailString, passwd: pwString, firstName: fName, lastName: lName, address: add, phoneNumber: phoneNum)
 
             }
         }
