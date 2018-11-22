@@ -12,7 +12,7 @@ class LoggedInViewController: MRKBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
     }
     
 

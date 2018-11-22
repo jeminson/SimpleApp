@@ -60,7 +60,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dY8-NG-L8X"/>
-                                    <segue destination="Zjh-mo-bHa" kind="show" id="6rZ-zl-asK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-rl-6W6">
@@ -111,7 +110,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="LoggedInViewController" storyboardName="LoggedIn" referencedIdentifier="LoggedInViewController" id="Zjh-mo-bHa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgs-PK-WZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="132"/>
+            <point key="canvasLocation" x="1754" y="213"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="ouS-7M-98g">

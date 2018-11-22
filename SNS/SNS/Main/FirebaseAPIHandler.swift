@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import TWMessageBarManager
 
-//typealias completionHandler = (Any?, Error?) ->()
+typealias completionHandler = (Error?) ->()
 
 class FirebaseAPIHandler: NSObject {
     // MARK: - Singleton class
@@ -53,24 +53,19 @@ extension FirebaseAPIHandler {
         }
     } // End resetPassword func
     
-    func signIn(email: String, passwd: String) -> Bool {
-        var isBool = false
+    func signIn(email: String, passwd: String, completion: @escaping completionHandler) {
     
         Auth.auth().signIn(withEmail: email, password: passwd) { (result, error) in
             if error == nil {
                 guard let user = result?.user else {return}
 
-                isBool = true
+                completion(nil)
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
-                print(isBool)
             } else {
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
-                print("Should be false \(isBool)")
+                completion(error!)
             }
         }
-    
-        print("isBool is \(isBool)")
-        return isBool 
     } // End signIn func
     
 

@@ -13,7 +13,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Cf4-Lo-Ipd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNs-OS-vqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ykn-a1-D1N" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mV9-yL-W5C">
@@ -25,6 +24,7 @@
                         <segue destination="45c-Fm-ORR" kind="relationship" relationship="rootViewController" id="mO4-bn-dfj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNs-OS-vqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="198" y="-215"/>
         </scene>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoq-sJ-2La" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8954.3999999999996" y="-218.1409295352324"/>
+            <point key="canvasLocation" x="6826" y="-215"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="1N8-N2-lVK">
@@ -306,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ov-LS-rLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8167.1999999999998" y="-218.1409295352324"/>
+            <point key="canvasLocation" x="5964" y="-218"/>
         </scene>
         <!--Chat-->
         <scene sceneID="Efc-ji-yI7">
