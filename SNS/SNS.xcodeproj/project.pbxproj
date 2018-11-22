@@ -7,25 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A26A75DC21A67F0200DAD38E /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A75DB21A67F0200DAD38E /* LoggedIn.storyboard */; };
+		A26A75DF21A67FC600DAD38E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75DE21A67FC600DAD38E /* HomeViewController.swift */; };
+		A26A75E221A67FFA00DAD38E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75E121A67FFA00DAD38E /* SettingViewController.swift */; };
+		A26A75E521A682C600DAD38E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75E421A682C600DAD38E /* UserViewController.swift */; };
+		A26A75E821A683A900DAD38E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75E721A683A900DAD38E /* ChatViewController.swift */; };
+		A26A75EB21A6842700DAD38E /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75EA21A6842700DAD38E /* FriendViewController.swift */; };
 		A2A970D021A48288009BA1BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */; };
 		A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970D321A4856A009BA1BA /* SignUp.storyboard */; };
 		A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970D521A48577009BA1BA /* SignUpViewController.swift */; };
 		A2A970D821A48789009BA1BA /* SignUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970D721A48789009BA1BA /* SignUpTableViewCell.swift */; };
-		A2A970DB21A491D0009BA1BA /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */; };
-		A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */; };
-		A2A970E021A495B0009BA1BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970DF21A495B0009BA1BA /* HomeViewController.swift */; };
-		A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E221A4982C009BA1BA /* FriendViewController.swift */; };
-		A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E521A49AB2009BA1BA /* UserViewController.swift */; };
-		A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970E821A49B9E009BA1BA /* ChatViewController.swift */; };
-		A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970EB21A49C94009BA1BA /* SettingViewController.swift */; };
 		A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */; };
 		A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */; };
 		A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */; };
 		A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F421A4ACE5009BA1BA /* UserInfo.swift */; };
-		A2A970F821A54276009BA1BA /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F721A54276009BA1BA /* EditUserViewController.swift */; };
-		A2A9710021A54420009BA1BA /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */; };
-		A2A9710421A548E5009BA1BA /* EditUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A9710321A548E5009BA1BA /* EditUser.storyboard */; };
-		A2A9710621A5490A009BA1BA /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -40,25 +35,20 @@
 		17536D8BB136CEB63323A930 /* Pods_SNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
+		A26A75DB21A67F0200DAD38E /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
+		A26A75DE21A67FC600DAD38E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A26A75E121A67FFA00DAD38E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A26A75E421A682C600DAD38E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		A26A75E721A683A900DAD38E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A26A75EA21A6842700DAD38E /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2A970D321A4856A009BA1BA /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A2A970D521A48577009BA1BA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A2A970D721A48789009BA1BA /* SignUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewCell.swift; sourceTree = "<group>"; };
-		A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
-		A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
-		A2A970DF21A495B0009BA1BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A2A970E221A4982C009BA1BA /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
-		A2A970E521A49AB2009BA1BA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		A2A970E821A49B9E009BA1BA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		A2A970EB21A49C94009BA1BA /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIHandler.swift; sourceTree = "<group>"; };
 		A2A970F421A4ACE5009BA1BA /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		A2A970F721A54276009BA1BA /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
-		A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		A2A9710321A548E5009BA1BA /* EditUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUser.storyboard; sourceTree = "<group>"; };
-		A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +89,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A26A75DA21A67EED00DAD38E /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75DB21A67F0200DAD38E /* LoggedIn.storyboard */,
+				A26A75DD21A67FB900DAD38E /* Home */,
+				A26A75E321A682AF00DAD38E /* User */,
+				A26A75E621A6839700DAD38E /* Chat */,
+				A26A75E921A6840E00DAD38E /* Friend */,
+				A26A75E021A67FED00DAD38E /* Setting */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		A26A75DD21A67FB900DAD38E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75DE21A67FC600DAD38E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A26A75E021A67FED00DAD38E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75E121A67FFA00DAD38E /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A26A75E321A682AF00DAD38E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75E421A682C600DAD38E /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A26A75E621A6839700DAD38E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75E721A683A900DAD38E /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		A26A75E921A6840E00DAD38E /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				A26A75EA21A6842700DAD38E /* FriendViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
 		A2A970D121A48522009BA1BA /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,62 +160,6 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		A2A970D921A491BC009BA1BA /* LoggedIn */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970DA21A491D0009BA1BA /* LoggedIn.storyboard */,
-				A2A970DC21A491DE009BA1BA /* LoggedInViewController.swift */,
-				A2A970DE21A49487009BA1BA /* Home */,
-				A2A970E121A49819009BA1BA /* Friend */,
-				A2A970E421A49AA2009BA1BA /* User */,
-				A2A970E721A49B90009BA1BA /* Chat */,
-				A2A970EA21A49C85009BA1BA /* Setting */,
-			);
-			path = LoggedIn;
-			sourceTree = "<group>";
-		};
-		A2A970DE21A49487009BA1BA /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970DF21A495B0009BA1BA /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		A2A970E121A49819009BA1BA /* Friend */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970E221A4982C009BA1BA /* FriendViewController.swift */,
-			);
-			path = Friend;
-			sourceTree = "<group>";
-		};
-		A2A970E421A49AA2009BA1BA /* User */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970E521A49AB2009BA1BA /* UserViewController.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		A2A970E721A49B90009BA1BA /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970E821A49B9E009BA1BA /* ChatViewController.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		A2A970EA21A49C85009BA1BA /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				A2A970EB21A49C94009BA1BA /* SettingViewController.swift */,
-				A2A970F621A54258009BA1BA /* EditUser */,
-				A2A970FC21A543FA009BA1BA /* ResetPassword */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
 		A2A970ED21A4A459009BA1BA /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,24 +167,6 @@
 				A2A970EE21A4A474009BA1BA /* ForgotPasswordViewController.swift */,
 			);
 			path = ForgotPassword;
-			sourceTree = "<group>";
-		};
-		A2A970F621A54258009BA1BA /* EditUser */ = {
-			isa = PBXGroup;
-			children = (
-				A2A9710321A548E5009BA1BA /* EditUser.storyboard */,
-				A2A970F721A54276009BA1BA /* EditUserViewController.swift */,
-			);
-			path = EditUser;
-			sourceTree = "<group>";
-		};
-		A2A970FC21A543FA009BA1BA /* ResetPassword */ = {
-			isa = PBXGroup;
-			children = (
-				A2A9710521A5490A009BA1BA /* ResetPassword.storyboard */,
-				A2A970FF21A54420009BA1BA /* ResetPasswordViewController.swift */,
-			);
-			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		A2F9FD5921A47D7C001E08CD = {
@@ -241,7 +210,7 @@
 				A2A970D121A48522009BA1BA /* SignIn */,
 				A2A970D221A48552009BA1BA /* SignUp */,
 				A2A970ED21A4A459009BA1BA /* ForgotPassword */,
-				A2A970D921A491BC009BA1BA /* LoggedIn */,
+				A26A75DA21A67EED00DAD38E /* LoggedIn */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -317,13 +286,11 @@
 			files = (
 				A2F9FD7021A47D7E001E08CD /* LaunchScreen.storyboard in Resources */,
 				A2A970D021A48288009BA1BA /* GoogleService-Info.plist in Resources */,
+				A26A75DC21A67F0200DAD38E /* LoggedIn.storyboard in Resources */,
 				A2F9FD6D21A47D7E001E08CD /* Assets.xcassets in Resources */,
-				A2A970DB21A491D0009BA1BA /* LoggedIn.storyboard in Resources */,
 				A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */,
 				A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */,
 				A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */,
-				A2A9710421A548E5009BA1BA /* EditUser.storyboard in Resources */,
-				A2A9710621A5490A009BA1BA /* ResetPassword.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,22 +357,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F9FD7C21A47F53001E08CD /* Utility.swift in Sources */,
-				A2A970E621A49AB2009BA1BA /* UserViewController.swift in Sources */,
-				A2A9710021A54420009BA1BA /* ResetPasswordViewController.swift in Sources */,
-				A2A970E921A49B9E009BA1BA /* ChatViewController.swift in Sources */,
+				A26A75E521A682C600DAD38E /* UserViewController.swift in Sources */,
+				A26A75E221A67FFA00DAD38E /* SettingViewController.swift in Sources */,
 				A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */,
 				A2F9FD7921A47DF7001E08CD /* MRKBaseViewController.swift in Sources */,
-				A2A970E021A495B0009BA1BA /* HomeViewController.swift in Sources */,
 				A2A970D821A48789009BA1BA /* SignUpTableViewCell.swift in Sources */,
 				A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */,
+				A26A75DF21A67FC600DAD38E /* HomeViewController.swift in Sources */,
 				A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */,
-				A2A970E321A4982C009BA1BA /* FriendViewController.swift in Sources */,
-				A2A970DD21A491DE009BA1BA /* LoggedInViewController.swift in Sources */,
-				A2A970F821A54276009BA1BA /* EditUserViewController.swift in Sources */,
+				A26A75E821A683A900DAD38E /* ChatViewController.swift in Sources */,
+				A26A75EB21A6842700DAD38E /* FriendViewController.swift in Sources */,
 				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
 				A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */,
-				A2A970EC21A49C94009BA1BA /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

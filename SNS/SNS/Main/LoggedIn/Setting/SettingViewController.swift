@@ -2,7 +2,7 @@
 //  SettingViewController.swift
 //  SNS
 //
-//  Created by Je Min Son on 11/20/18.
+//  Created by Je Min Son on 11/22/18.
 //  Copyright © 2018 Jason Son. All rights reserved.
 //
 
@@ -14,23 +14,10 @@ class SettingViewController: MRKBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Setting"
+        title = "SETTING"
     }
     
 
-    @IBAction func editUserActionButton(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "EditUserViewController") as? EditUserViewController {
-            self.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-    
-    @IBAction func resetPasswordActionButton(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordViewController") as? ResetPasswordViewController {
-            self.navigationController?.pushViewController(controller, animated: true)
-        }
-    }
-    
-    
     
     @IBAction func logoutActionButton(_ sender: UIButton) {
         let mainStoreBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

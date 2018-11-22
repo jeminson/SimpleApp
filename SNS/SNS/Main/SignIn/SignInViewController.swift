@@ -28,7 +28,7 @@ class SignInViewController: MRKBaseViewController {
         FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!) { (error) in
             if error == nil {
                 
-                let tabbar : UITabBarController? = (self.storyboard?.instantiateViewController(withIdentifier: "LoggedInViewController") as? UITabBarController)
+                let tabbar : UITabBarController? = (self.storyboard?.instantiateViewController(withIdentifier: "LoggedInTabBarController") as? UITabBarController)
                 
                 self.navigationController?.pushViewController(tabbar!, animated: true)
                 

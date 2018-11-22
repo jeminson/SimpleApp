@@ -104,13 +104,13 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
-        <!--LoggedInViewController-->
+        <!--LoggedInTabBarController-->
         <scene sceneID="23M-cy-wnt">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="LoggedInViewController" storyboardName="LoggedIn" referencedIdentifier="LoggedInViewController" id="Zjh-mo-bHa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="LoggedInTabBarController" storyboardName="LoggedIn" referencedIdentifier="LoggedInTabBarController" id="Zjh-mo-bHa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgs-PK-WZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="213"/>
+            <point key="canvasLocation" x="1764" y="228"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="ouS-7M-98g">
