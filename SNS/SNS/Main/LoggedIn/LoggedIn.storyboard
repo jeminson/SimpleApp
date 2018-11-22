@@ -38,6 +38,23 @@
                                     <action selector="logoutActionButton:" destination="llq-g4-7pU" eventType="touchUpInside" id="xFB-5G-lwj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-aL-cpY">
+                                <rect key="frame" x="16" y="80" width="343" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Edit User">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ViewCorner">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editUserActionButton:" destination="llq-g4-7pU" eventType="touchUpInside" id="Het-OS-YvW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -53,6 +70,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJc-vN-jIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3512.8000000000002" y="724.58770614692662"/>
+        </scene>
+        <!--EditUserViewController-->
+        <scene sceneID="aIP-B6-xzc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EditUserViewController" storyboardName="EditUser" referencedIdentifier="EditUserViewController" id="WsQ-15-ggB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUB-En-jaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4187" y="586"/>
         </scene>
         <!--Friend View Controller-->
         <scene sceneID="XY3-AY-qnn">

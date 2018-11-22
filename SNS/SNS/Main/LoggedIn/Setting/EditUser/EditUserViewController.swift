@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  EditUserViewController.swift
 //  SNS
 //
 //  Created by Je Min Son on 11/22/18.
@@ -8,18 +8,19 @@
 
 import UIKit
 
-class UserViewController: MRKBaseViewController {
+class EditUserViewController: MRKBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "USER"
+        title = "EDIT USER"
     }
     
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tabBarController?.navigationItem.hidesBackButton = true
+        self.tabBarController?.navigationItem.hidesBackButton = false
     }
 
 }
