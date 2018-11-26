@@ -79,8 +79,8 @@ extension FirebaseAPIHandler {
         let imageName = "UserImages/\(String(describing: userID)).png"
         print(imageName)
         
-        storageRef = storageRef.child(imageName)
-        storageRef.putData(data!, metadata: metaData) { (metaDataS, error) in
+//        storageRef = storageRef.child(imageName)
+        storageRef.child(imageName).putData(data!, metadata: metaData) { (metaDataS, error) in
             
         }
         
