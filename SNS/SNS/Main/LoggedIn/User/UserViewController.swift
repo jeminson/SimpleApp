@@ -15,7 +15,7 @@ class UserViewController: MRKBaseViewController {
 
         title = "USER"
         
-                
+//        FirebaseAPIHandler.sharedInstance.fetchTheDate()
         
     }
     

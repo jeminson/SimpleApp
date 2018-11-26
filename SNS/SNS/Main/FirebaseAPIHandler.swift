@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
-import TWMessageBarManager
+import FirebaseStorage
 
 typealias completionHandler = (Error?) ->()
 
@@ -19,10 +19,11 @@ class FirebaseAPIHandler: NSObject {
     private override init() {}
 
     var databaseRef : DatabaseReference! = Database.database().reference().child("USERS")
+    var storageRef: StorageReference! = Storage.storage().reference()
 }
 
 extension FirebaseAPIHandler {
-    func signUp(userInfo: UserInfo) {
+    func signUp(userInfo: UserInfo, img: UIImage, completion: @escaping completionHandler) {
         
         Auth.auth().createUser(withEmail: userInfo.emailId!, password: userInfo.password!) { (result, error) in
             if error == nil {
@@ -32,23 +33,24 @@ extension FirebaseAPIHandler {
                 self.databaseRef.child(user.uid).setValue(["ID":user.uid, "EmailId":userInfo.emailId!, "FirstName": userInfo.firstName!, "LastName": userInfo.lastName!, "Address": userInfo.address!, "Phone Number": userInfo.phoneNumber!], withCompletionBlock: { (error, ref) in
                     
                     if error == nil {
-                        print(ref)
+//                        print(ref)
+                        self.uploadImage(userID: user.uid, image: img)
                     }
                 })
 
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
+                completion(nil)
             } else {
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                completion(error!)
             }
         }
     } // End signUp func
     
-    func resetPassword(email: String) {
+    func resetPassword(email: String, completion: @escaping completionHandler) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error == nil {
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Reset", description: "Sent to your email", type: .info)
+                completion(nil)
             } else {
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                completion(error!)
             }
         }
     } // End resetPassword func
@@ -60,28 +62,29 @@ extension FirebaseAPIHandler {
                 guard let user = result?.user else {return}
 
                 completion(nil)
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
             } else {
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
                 completion(error!)
             }
         }
     } // End signIn func
     
-    func fetchTheDate() -> Int {
-        var count : Int = 0
-        databaseRef.observeSingleEvent(of: .value) { (snapshot) in
+
+    func uploadImage(userID: String, image: UIImage) {
+        let data = image.pngData()
+        let metaData = StorageMetadata()
+        
+        metaData.contentType = "image/png"
+        
+//        let imageName = "UserImages/\(userID).png"
+        let imageName = "UserImages/\(String(describing: userID)).png"
+        print(imageName)
+        
+        storageRef = storageRef.child(imageName)
+        storageRef.putData(data!, metadata: metaData) { (metaDataS, error) in
             
-            if !snapshot.exists() { return }
-            
-            if let array = snapshot.value as? [String:Any] {
-                count = array.count
-                
-                
-            }
         }
         
-        return count
+        
     }
-
+    
 }

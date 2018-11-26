@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TWMessageBarManager
+
 
 class ForgotPasswordViewController: MRKBaseViewController {
 
@@ -18,11 +20,16 @@ class ForgotPasswordViewController: MRKBaseViewController {
             title = "Forgot Password"
     }
     
-    
     @IBAction func submitActionButton(_ sender: UIButton) {
     
-        if usernameTextField.text != nil {
-            FirebaseAPIHandler.sharedInstance.resetPassword(email: usernameTextField.text!)
+
+        FirebaseAPIHandler.sharedInstance.resetPassword(email: usernameTextField.text!) { (error) in
+            if error == nil {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Reset", description: "Sent to your email", type: .info)
+            } else {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+            }
+            
         }
         
         

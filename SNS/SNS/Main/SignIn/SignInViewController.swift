@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TWMessageBarManager
 
 class SignInViewController: MRKBaseViewController {
     
@@ -30,10 +31,13 @@ class SignInViewController: MRKBaseViewController {
                 
                 let tabbar : UITabBarController? = (self.storyboard?.instantiateViewController(withIdentifier: "LoggedInTabBarController") as? UITabBarController)
                 
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
                 self.navigationController?.pushViewController(tabbar!, animated: true)
                 
                 print("logged in")
             } else {
+                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+
                 print("error")
             }
         }

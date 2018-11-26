@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import TWMessageBarManager
 
 protocol DetailUserInfo {
     func saveUserInfo(object: UserInfo, editUserInfo: Bool)
@@ -15,6 +15,9 @@ protocol DetailUserInfo {
 
 class SignUpViewController: MRKBaseViewController {
     
+    @IBOutlet weak var userImage: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
     var userInfo : UserInfo?
     var delegate : DetailUserInfo?
     var isEdit: Bool = false
@@ -26,11 +29,25 @@ class SignUpViewController: MRKBaseViewController {
 
         title = "Sign Up"
         
+        imagePicker.delegate = self
+        
         if userInfo == nil {
             userInfo = UserInfo()
         }
+        
     }
     
+    @IBAction func userImageActionButton(_ sender: UIButton) {
+        imagePicker.allowsEditing = true
+        
+        if imagePicker.sourceType == .camera {
+            imagePicker.sourceType = .camera
+        } else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     
     @IBAction func submitActionButton(_ sender: UIButton) {
@@ -41,13 +58,37 @@ class SignUpViewController: MRKBaseViewController {
             if let _ = obj.firstName, let _ = obj.lastName, let _ = obj.emailId, let _ = obj.address, let _ = obj.phoneNumber, let _ = obj.password {
                 delegate?.saveUserInfo(object: obj, editUserInfo: isEdit)
                 
-                FirebaseAPIHandler.sharedInstance.signUp(userInfo: obj)
+                FirebaseAPIHandler.sharedInstance.signUp(userInfo: obj, img: userImage.image ?? UIImage(named: "default_user")!) { (error) in
+                    if error == nil {
+                        TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                        TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                    }
+                    
+                }
             }
         }
-        
+
         
     }
     
+}
+
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            userImage.image = image
+        }
+        
+        
+        dismiss(animated: true, completion: nil)
+    } // End imagePickerController
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    } // End imagePickerControllerDidCancel
 }
 
 extension SignUpViewController: UITextFieldDelegate {
