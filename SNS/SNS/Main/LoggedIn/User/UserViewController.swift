@@ -14,6 +14,9 @@ class UserViewController: MRKBaseViewController {
         super.viewDidLoad()
 
         title = "USER"
+        
+                
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,4 +25,17 @@ class UserViewController: MRKBaseViewController {
         self.tabBarController?.navigationItem.hidesBackButton = true
     }
 
+}
+
+
+extension UserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
+        
+        return cell
+    }
 }

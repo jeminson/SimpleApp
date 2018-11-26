@@ -68,5 +68,20 @@ extension FirebaseAPIHandler {
         }
     } // End signIn func
     
+    func fetchTheDate() -> Int {
+        var count : Int = 0
+        databaseRef.observeSingleEvent(of: .value) { (snapshot) in
+            
+            if !snapshot.exists() { return }
+            
+            if let array = snapshot.value as? [String:Any] {
+                count = array.count
+                
+                
+            }
+        }
+        
+        return count
+    }
 
 }
