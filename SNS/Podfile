@@ -11,5 +11,6 @@ target 'SNS' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'TWMessageBarManager'
+  pod 'SVProgressHUD'
 
 end

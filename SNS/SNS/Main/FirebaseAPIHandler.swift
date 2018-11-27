@@ -85,6 +85,9 @@ extension FirebaseAPIHandler {
     
     func fetchTheData(completion: @escaping completionHandler) {
 
+        let fetchUserGroup = DispatchGroup()
+        let fetchUserComponentsGroup = DispatchGroup()
+        fetchUserGroup.enter()
         databaseRef.observeSingleEvent(of: .value) { (snapshot, error) in
             if error == nil {
                 var userArray : [UserInfo] = []
@@ -99,9 +102,13 @@ extension FirebaseAPIHandler {
                                                           address: item.value["Address"] as? String,
                                                           phoneNumber: item.value["Phone Number"] as? String,
                                                           password: nil)
+                            
+                            fetchUserComponentsGroup.enter()
+                            
                             userArray.append(userModel)
                         }
                         completion(userArray, nil)
+                        
 
                     }
                 } catch {

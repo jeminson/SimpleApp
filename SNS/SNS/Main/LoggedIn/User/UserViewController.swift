@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class UserViewController: MRKBaseViewController {
 
@@ -19,7 +20,12 @@ class UserViewController: MRKBaseViewController {
 
         title = "USER"
         
+        SVProgressHUD.show()
         FirebaseAPIHandler.sharedInstance.fetchTheData { (result, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
             if error == nil {
                 self.userInfoArray = result as! [UserInfo]
                 
@@ -29,8 +35,17 @@ class UserViewController: MRKBaseViewController {
             }
         }
         
+    }
+    @IBAction func addFriendButton(_ sender: UIButton) {
         
+        let AlertController = UIAlertController(title: "Add Friend", message: "Do you want to add as your friend?", preferredStyle: .alert)
+        let addAction = UIAlertAction(title: "ADD", style: .default)
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel)
         
+        AlertController.addAction(addAction)
+        AlertController.addAction(cancelAction)
+        
+        present(AlertController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +64,10 @@ extension UserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
+        
+        let user = userInfoArray[indexPath.row]
+        cell.firstNameLabel.text = user.firstName
+        cell.lastNameLabel.text = user.lastName
         
         return cell
     }
