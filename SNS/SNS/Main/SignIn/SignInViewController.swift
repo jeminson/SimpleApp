@@ -29,14 +29,19 @@ class SignInViewController: MRKBaseViewController {
         FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!) { (result, error) in
             if error == nil {
                 
-                let tabbar : UITabBarController? = (self.storyboard?.instantiateViewController(withIdentifier: "LoggedInTabBarController") as? UITabBarController)
                 
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
-                self.navigationController?.pushViewController(tabbar!, animated: true)
+                DispatchQueue.main.async {
+                    
+                    TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
+                    self.performSegue(withIdentifier: "LoggedInTabBarController", sender: nil)
+                }
                 
                 print("logged in")
             } else {
-                TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                
+                DispatchQueue.main.async {
+                    TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                }
 
                 print("error")
             }

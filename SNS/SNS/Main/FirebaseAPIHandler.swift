@@ -33,7 +33,6 @@ extension FirebaseAPIHandler {
                 self.databaseRef.child(user.uid).setValue(["ID":user.uid, "EmailId":userInfo.emailId!, "FirstName": userInfo.firstName!, "LastName": userInfo.lastName!, "Address": userInfo.address!, "Phone Number": userInfo.phoneNumber!], withCompletionBlock: { (error, ref) in
                     
                     if error == nil {
-//                        print(ref)
                         self.uploadImage(userID: user.uid, image: img)
                     }
                 })
@@ -76,47 +75,58 @@ extension FirebaseAPIHandler {
         metaData.contentType = "image/jpeg"
         
         let imageName = "UserImages/\(String(describing: userID)).jpeg"
-        print(imageName)
         
         storageRef.child(imageName).putData(data!, metadata: metaData) { (metaDataS, error) in
             
         }
     } // End uploadImage
     
+    func getImage(userID: String, completion: @escaping completionHandler) {
+        let imageName = "UserImages/\(String(describing: userID)).jpeg"
+        
+        storageRef.child(imageName).getData(maxSize: 1*600*600) { (data, error) in
+            if error == nil {
+                let image = UIImage(data: data!)
+                
+                completion(image, nil)
+            } else {
+                completion(nil, error)
+            }
+            
+        }
+    }
+    
     func fetchTheData(completion: @escaping completionHandler) {
 
-        let fetchUserGroup = DispatchGroup()
-        let fetchUserComponentsGroup = DispatchGroup()
-        fetchUserGroup.enter()
         databaseRef.observeSingleEvent(of: .value) { (snapshot, error) in
             if error == nil {
                 var userArray : [UserInfo] = []
 
-                do {
-                    if let user = snapshot.value as? [String: [String: Any]] {
+                if let user = snapshot.value as? [String: [String: Any]] {
                         
-                        for item in user {
-                            let userModel = UserInfo.init(firstName: item.value["FirstName"] as? String,
-                                                          lastName: item.value["LastName"] as? String,
-                                                          emailId: item.value["EmailId"] as? String,
-                                                          address: item.value["Address"] as? String,
-                                                          phoneNumber: item.value["Phone Number"] as? String,
-                                                          password: nil)
+                    for item in user {
+                        let userModel = UserInfo.init(firstName: item.value["FirstName"] as? String,
+                                                      lastName: item.value["LastName"] as? String,
+                                                      emailId: item.value["EmailId"] as? String,
+                                                      address: item.value["Address"] as? String,
+                                                      phoneNumber: item.value["Phone Number"] as? String,
+                                                      password: nil)
                             
-                            fetchUserComponentsGroup.enter()
-                            
-                            userArray.append(userModel)
-                        }
-                        completion(userArray, nil)
-                        
-
+                        userArray.append(userModel)
                     }
-                } catch {
-                    completion(nil, error)
+                    completion(userArray, nil)
+                } else {
+                    completion(nil, error as? Error)
                 }
+                
             }
 
         }
+    }
+    
+    func logoutFromFirebase() {
+        
+        try!  Auth.auth().signOut()
     }
     
 }

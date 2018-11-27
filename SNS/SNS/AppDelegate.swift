@@ -19,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+                if let curUser = Auth.auth().currentUser {
+                    let mainStoryboard : UIStoryboard = UIStoryboard(name: "LoggedIn", bundle: nil)
+                    let controller = mainStoryboard.instantiateViewController(withIdentifier: "LoggedInTabBarController")
+                    self.window?.rootViewController = controller
+                }
+        
         return true
     }
 

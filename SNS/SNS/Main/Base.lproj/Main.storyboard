@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="wUo-cV-qVy" id="f6F-L5-03t"/>
                         <outlet property="usernameTextField" destination="XZh-mn-csF" id="40M-fJ-Mdi"/>
+                        <segue destination="4mB-ez-and" kind="presentation" identifier="LoggedInTabBarController" id="0d6-OR-lv7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,12 +106,12 @@
             <point key="canvasLocation" x="1071.2" y="132.68365817091455"/>
         </scene>
         <!--LoggedInTabBarController-->
-        <scene sceneID="23M-cy-wnt">
+        <scene sceneID="U7O-cR-abr">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="LoggedInTabBarController" storyboardName="LoggedIn" referencedIdentifier="LoggedInTabBarController" id="Zjh-mo-bHa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cgs-PK-WZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="LoggedIn" referencedIdentifier="LoggedInTabBarController" id="4mB-ez-and" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQD-ox-Gzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="228"/>
+            <point key="canvasLocation" x="1764" y="113"/>
         </scene>
         <!--ForgotPasswordViewController-->
         <scene sceneID="ouS-7M-98g">
@@ -131,6 +132,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZHx-md-c5p">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnX-Z1-gdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vRV-9v-4SZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S4W-eO-wAD">
@@ -142,7 +144,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tzb-ka-FCP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnX-Z1-gdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154" y="133"/>
         </scene>

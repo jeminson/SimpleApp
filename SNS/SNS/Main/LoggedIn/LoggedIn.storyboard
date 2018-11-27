@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mke-Bh-17t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -303,6 +303,7 @@
                                         <connections>
                                             <outlet property="firstNameLabel" destination="qwT-sl-Jhd" id="Hye-eu-ti9"/>
                                             <outlet property="lastNameLabel" destination="107-sQ-lfO" id="bz9-iI-EVo"/>
+                                            <outlet property="userProfileImgView" destination="E9q-CU-qXD" id="Naf-M2-FaR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
