@@ -16,11 +16,7 @@ class HomeViewController: MRKBaseViewController {
         title = "HOME"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = true
-    }
+
  
 
 }

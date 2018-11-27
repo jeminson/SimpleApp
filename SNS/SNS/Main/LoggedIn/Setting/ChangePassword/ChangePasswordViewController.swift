@@ -15,12 +15,5 @@ class ChangePasswordViewController: UIViewController {
 
         title = "Change Password"
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = false
-    }
-
 
 }

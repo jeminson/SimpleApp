@@ -16,10 +16,4 @@ class ChatViewController: MRKBaseViewController {
         title = "Chat"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = true
-    }
-
 }

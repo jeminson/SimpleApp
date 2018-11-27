@@ -16,9 +16,4 @@ class FriendViewController: MRKBaseViewController {
         title = "Friends"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = true
-    }
 }

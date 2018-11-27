@@ -47,12 +47,6 @@ class UserViewController: MRKBaseViewController {
         
         present(AlertController, animated: true, completion: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = true
-    }
 
 }
 

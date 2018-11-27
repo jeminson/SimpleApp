@@ -15,12 +15,6 @@ class EditUserViewController: MRKBaseViewController {
 
         title = "EDIT USER"
     }
-    
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.tabBarController?.navigationItem.hidesBackButton = false
-    }
 
 }
