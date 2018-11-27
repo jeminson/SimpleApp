@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 struct UserInfo {
+    var id: String? 
     var firstName: String?
     var lastName: String?
     var emailId: String?
     var address: String?
     var phoneNumber: String?
     var password: String?
-//    var img: UIImage?
+    var img: UIImage?
 }

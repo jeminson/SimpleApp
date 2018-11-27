@@ -98,6 +98,10 @@ extension FirebaseAPIHandler {
     
     func fetchTheData(completion: @escaping completionHandler) {
 
+        let fetchUserGroup = DispatchGroup()
+        let fetchUserComponentsGroup = DispatchGroup()
+        fetchUserGroup.enter()
+        
         databaseRef.observeSingleEvent(of: .value) { (snapshot, error) in
             if error == nil {
                 var userArray : [UserInfo] = []
@@ -105,16 +109,34 @@ extension FirebaseAPIHandler {
                 if let user = snapshot.value as? [String: [String: Any]] {
                         
                     for item in user {
-                        let userModel = UserInfo.init(firstName: item.value["FirstName"] as? String,
+                        var userModel = UserInfo.init(id: item.key,
+                                                      firstName: item.value["FirstName"] as? String,
                                                       lastName: item.value["LastName"] as? String,
                                                       emailId: item.value["EmailId"] as? String,
                                                       address: item.value["Address"] as? String,
                                                       phoneNumber: item.value["Phone Number"] as? String,
-                                                      password: nil)
-                            
-                        userArray.append(userModel)
+                                                      password: nil,
+                                                      img: nil)
+                        
+                        fetchUserComponentsGroup.enter()
+                        self.getImage(userID: item.key, completion: { (img, error) in
+                            if error == nil && !(img == nil) {
+                                userModel.img = img as? UIImage
+                            }
+                            userArray.append(userModel)
+                            fetchUserComponentsGroup.leave()
+                        })
+                        
+
                     }
-                    completion(userArray, nil)
+                    fetchUserComponentsGroup.notify(queue: .main) {
+                        fetchUserGroup.leave()
+                    }
+                    
+                    fetchUserGroup.notify(queue: .main) {
+                        // now the currentUser should be properly configured
+                        completion(userArray, nil)
+                    }
                 } else {
                     completion(nil, error as? Error)
                 }

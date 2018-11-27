@@ -62,7 +62,7 @@ extension UserViewController: UITableViewDataSource {
         let user = userInfoArray[indexPath.row]
         cell.firstNameLabel.text = user.firstName
         cell.lastNameLabel.text = user.lastName
-//        cell.userProfileImgView.image = UIImage()
+        cell.userProfileImgView.image = user.img
         
         
         return cell
