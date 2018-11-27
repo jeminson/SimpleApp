@@ -86,6 +86,7 @@ PODS:
   - Protobuf (3.6.1)
   - SVProgressHUD (2.2.5)
   - TWMessageBarManager (1.8.1)
+  - "UITextView+Placeholder (1.2.1)"
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - SVProgressHUD
   - TWMessageBarManager
+  - "UITextView+Placeholder"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -116,6 +118,7 @@ SPEC REPOS:
     - Protobuf
     - SVProgressHUD
     - TWMessageBarManager
+    - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
   Firebase: 9190018e296139d938b99521cde0c15a6e8d2946
@@ -136,7 +139,8 @@ SPEC CHECKSUMS:
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
+  "UITextView+Placeholder": 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
 
-PODFILE CHECKSUM: 1d8429e628d9cbafa53d7dc1df92e37a4835b752
+PODFILE CHECKSUM: 06c86de9c834c82e5b58edd2e095bf983e5e8285
 
 COCOAPODS: 1.5.3
