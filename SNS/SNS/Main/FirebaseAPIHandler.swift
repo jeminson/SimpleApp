@@ -84,7 +84,7 @@ extension FirebaseAPIHandler {
     func getImage(userID: String, completion: @escaping completionHandler) {
         let imageName = "UserImages/\(String(describing: userID)).png"
         
-        storageRef.child(imageName).getData(maxSize: 1*600*600) { (data, error) in
+        storageRef.child(imageName).getData(maxSize: 10*1024*1024) { (data, error) in
             if error == nil {
                 let image = UIImage(data: data!)
                 
