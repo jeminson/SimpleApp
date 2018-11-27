@@ -72,9 +72,9 @@ extension FirebaseAPIHandler {
         let data = image.jpeg(.lowest)
         let metaData = StorageMetadata()
         
-        metaData.contentType = "image/jpeg"
+        metaData.contentType = "image/png"
         
-        let imageName = "UserImages/\(String(describing: userID)).jpeg"
+        let imageName = "UserImages/\(String(describing: userID)).png"
         
         storageRef.child(imageName).putData(data!, metadata: metaData) { (metaDataS, error) in
             
@@ -82,7 +82,7 @@ extension FirebaseAPIHandler {
     } // End uploadImage
     
     func getImage(userID: String, completion: @escaping completionHandler) {
-        let imageName = "UserImages/\(String(describing: userID)).jpeg"
+        let imageName = "UserImages/\(String(describing: userID)).png"
         
         storageRef.child(imageName).getData(maxSize: 1*600*600) { (data, error) in
             if error == nil {
@@ -101,6 +101,8 @@ extension FirebaseAPIHandler {
         let fetchUserGroup = DispatchGroup()
         let fetchUserComponentsGroup = DispatchGroup()
         fetchUserGroup.enter()
+
+        let id = Auth.auth().currentUser?.uid
         
         databaseRef.observeSingleEvent(of: .value) { (snapshot, error) in
             if error == nil {
@@ -123,7 +125,10 @@ extension FirebaseAPIHandler {
                             if error == nil && !(img == nil) {
                                 userModel.img = img as? UIImage
                             }
-                            userArray.append(userModel)
+                            
+                            if userModel.id != id {
+                                userArray.append(userModel)
+                            }
                             fetchUserComponentsGroup.leave()
                         })
                         
