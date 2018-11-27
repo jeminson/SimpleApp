@@ -23,6 +23,11 @@ class SettingViewController: MRKBaseViewController {
         }
     }
     
+    @IBAction func changePasswdActionButton(_ sender: UIButton) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
     
     @IBAction func logoutActionButton(_ sender: UIButton) {
         let mainStoreBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
