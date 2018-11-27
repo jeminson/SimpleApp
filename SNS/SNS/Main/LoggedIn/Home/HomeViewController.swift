@@ -17,6 +17,12 @@ class HomeViewController: MRKBaseViewController {
     }
     
 
- 
+    @IBAction func addPostBarButton(_ sender: UIBarButtonItem) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "AddPostViewController", sender: nil)
+        }
+    }
+    
+    
 
 }

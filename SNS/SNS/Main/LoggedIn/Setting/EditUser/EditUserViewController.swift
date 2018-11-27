@@ -10,6 +10,8 @@ import UIKit
 
 class EditUserViewController: MRKBaseViewController {
 
+    @IBOutlet weak var userProfileImgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

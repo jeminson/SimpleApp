@@ -179,11 +179,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DAr-7L-ccC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kkq-sX-Ov3"/>
+                    <navigationItem key="navigationItem" id="kkq-sX-Ov3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="WPZ-Yt-hFd">
+                            <connections>
+                                <action selector="addPostBarButton:" destination="hwC-iR-Nuv" id="RHM-vE-UVt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="rLK-U9-A6f" kind="show" identifier="AddPostViewController" id="83Z-tb-9Ku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvm-KD-Z6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3513" y="-2004"/>
+        </scene>
+        <!--AddPostViewController-->
+        <scene sceneID="Hv3-eY-b1h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddPost" referencedIdentifier="AddPostViewController" id="rLK-U9-A6f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxG-el-M1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4165" y="-2292"/>
         </scene>
         <!--User View Controller-->
         <scene sceneID="6zT-Yd-7T2">
