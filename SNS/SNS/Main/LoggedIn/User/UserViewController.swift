@@ -10,12 +10,26 @@ import UIKit
 
 class UserViewController: MRKBaseViewController {
 
+    @IBOutlet weak var userTableView: UITableView!
+    var userInfoArray : [UserInfo] = []
+    var count : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "USER"
         
-//        FirebaseAPIHandler.sharedInstance.fetchTheDate()
+        FirebaseAPIHandler.sharedInstance.fetchTheData { (result, error) in
+            if error == nil {
+                self.userInfoArray = result as! [UserInfo]
+                
+                DispatchQueue.main.async {
+                    self.userTableView.reloadData()
+                }
+            }
+        }
+        
+        
         
     }
     
@@ -30,7 +44,7 @@ class UserViewController: MRKBaseViewController {
 
 extension UserViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return userInfoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

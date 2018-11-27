@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserInfo: NSObject {
+struct UserInfo {
     var firstName: String?
     var lastName: String?
     var emailId: String?

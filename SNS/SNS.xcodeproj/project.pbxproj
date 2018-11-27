@@ -173,7 +173,6 @@
 				A2A970D321A4856A009BA1BA /* SignUp.storyboard */,
 				A2A970D521A48577009BA1BA /* SignUpViewController.swift */,
 				A2A970D721A48789009BA1BA /* SignUpTableViewCell.swift */,
-				A2A970F421A4ACE5009BA1BA /* UserInfo.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -224,6 +223,7 @@
 			children = (
 				A2F9FD6921A47D7C001E08CD /* Main.storyboard */,
 				A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */,
+				A2A970F421A4ACE5009BA1BA /* UserInfo.swift */,
 				A2A970D121A48522009BA1BA /* SignIn */,
 				A2A970D221A48552009BA1BA /* SignUp */,
 				A2A970ED21A4A459009BA1BA /* ForgotPassword */,

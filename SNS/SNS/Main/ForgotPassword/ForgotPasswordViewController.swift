@@ -23,9 +23,10 @@ class ForgotPasswordViewController: MRKBaseViewController {
     @IBAction func submitActionButton(_ sender: UIButton) {
     
 
-        FirebaseAPIHandler.sharedInstance.resetPassword(email: usernameTextField.text!) { (error) in
+        FirebaseAPIHandler.sharedInstance.resetPassword(email: usernameTextField.text!) { (result, error) in
             if error == nil {
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Reset", description: "Sent to your email", type: .info)
+                self.navigationController?.popViewController(animated: true)
             } else {
                 TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
             }

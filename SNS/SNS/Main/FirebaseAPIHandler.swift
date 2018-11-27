@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-typealias completionHandler = (Error?) ->()
+typealias completionHandler = (Any?, Error?) ->()
 
 class FirebaseAPIHandler: NSObject {
     // MARK: - Singleton class
@@ -38,9 +38,9 @@ extension FirebaseAPIHandler {
                     }
                 })
 
-                completion(nil)
+                completion(result, nil)
             } else {
-                completion(error!)
+                completion(nil, error)
             }
         }
     } // End signUp func
@@ -48,9 +48,9 @@ extension FirebaseAPIHandler {
     func resetPassword(email: String, completion: @escaping completionHandler) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error == nil {
-                completion(nil)
+                completion(nil, nil)
             } else {
-                completion(error!)
+                completion(nil, error)
             }
         }
     } // End resetPassword func
@@ -61,30 +61,55 @@ extension FirebaseAPIHandler {
             if error == nil {
                 guard let user = result?.user else {return}
 
-                completion(nil)
+                completion(user, nil)
             } else {
-                completion(error!)
+                completion(nil, error)
             }
         }
     } // End signIn func
     
 
     func uploadImage(userID: String, image: UIImage) {
-        let data = image.pngData()
+        let data = image.jpeg(.lowest)
         let metaData = StorageMetadata()
         
-        metaData.contentType = "image/png"
+        metaData.contentType = "image/jpeg"
         
-//        let imageName = "UserImages/\(userID).png"
-        let imageName = "UserImages/\(String(describing: userID)).png"
+        let imageName = "UserImages/\(String(describing: userID)).jpeg"
         print(imageName)
         
-//        storageRef = storageRef.child(imageName)
         storageRef.child(imageName).putData(data!, metadata: metaData) { (metaDataS, error) in
             
         }
-        
-        
+    } // End uploadImage
+    
+    func fetchTheData(completion: @escaping completionHandler) {
+
+        databaseRef.observeSingleEvent(of: .value) { (snapshot, error) in
+            if error == nil {
+                var userArray : [UserInfo] = []
+
+                do {
+                    if let user = snapshot.value as? [String: [String: Any]] {
+                        
+                        for item in user {
+                            let userModel = UserInfo.init(firstName: item.value["FirstName"] as? String,
+                                                          lastName: item.value["LastName"] as? String,
+                                                          emailId: item.value["EmailId"] as? String,
+                                                          address: item.value["Address"] as? String,
+                                                          phoneNumber: item.value["Phone Number"] as? String,
+                                                          password: nil)
+                            userArray.append(userModel)
+                        }
+                        completion(userArray, nil)
+
+                    }
+                } catch {
+                    completion(nil, error)
+                }
+            }
+
+        }
     }
     
 }
