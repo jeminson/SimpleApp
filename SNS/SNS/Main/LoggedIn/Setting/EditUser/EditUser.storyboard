@@ -138,6 +138,9 @@
                         <viewLayoutGuide key="safeArea" id="whR-vq-fSK"/>
                     </view>
                     <navigationItem key="navigationItem" id="1sQ-NH-jFJ"/>
+                    <connections>
+                        <outlet property="editUserTableView" destination="908-P8-wbE" id="Hgz-ZL-iRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlA-Gi-hcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

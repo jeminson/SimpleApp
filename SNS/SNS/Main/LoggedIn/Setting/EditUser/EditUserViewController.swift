@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import SVProgressHUD
+
 
 class EditUserViewController: MRKBaseViewController {
+    
+    @IBOutlet weak var editUserTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "EDIT USER"
+        
+        FirebaseAPIHandler.sharedInstance.fetchCurrentUserData() { (result, error) in
+            if error == nil {
+                print(result!)
+
+            }
+        }
+
     }
 
 
@@ -26,6 +38,7 @@ extension EditUserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditUserTableViewCell") as! EditUserTableViewCell
+        
         
         return cell
     }
