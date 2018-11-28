@@ -96,6 +96,8 @@ extension FirebaseAPIHandler {
         }
     }
     
+    
+    
     func fetchTheData(completion: @escaping completionHandler) {
 
         let fetchUserGroup = DispatchGroup()

@@ -19,3 +19,4 @@ struct UserInfo {
     var password: String?
     var img: UIImage?
 }
+

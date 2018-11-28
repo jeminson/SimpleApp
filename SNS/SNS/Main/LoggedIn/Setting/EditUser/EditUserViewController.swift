@@ -9,8 +9,6 @@
 import UIKit
 
 class EditUserViewController: MRKBaseViewController {
-
-    @IBOutlet weak var userProfileImgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +17,18 @@ class EditUserViewController: MRKBaseViewController {
     }
 
 
+}
+
+extension EditUserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EditUserTableViewCell") as! EditUserTableViewCell
+        
+        return cell
+    }
+    
+    
 }

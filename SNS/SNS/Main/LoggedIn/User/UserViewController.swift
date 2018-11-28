@@ -39,7 +39,9 @@ class UserViewController: MRKBaseViewController {
     @IBAction func addFriendButton(_ sender: UIButton) {
         
         let AlertController = UIAlertController(title: "Add Friend", message: "Do you want to add as your friend?", preferredStyle: .alert)
-        let addAction = UIAlertAction(title: "ADD", style: .default)
+        let addAction = UIAlertAction(title: "ADD", style: .default) { action in
+            print("ADD")
+        }
         let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel)
         
         AlertController.addAction(addAction)
@@ -63,7 +65,6 @@ extension UserViewController: UITableViewDataSource {
         cell.firstNameLabel.text = user.firstName
         cell.lastNameLabel.text = user.lastName
         cell.userProfileImgView.image = user.img
-        
         
         return cell
     }

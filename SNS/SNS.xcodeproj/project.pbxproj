@@ -28,6 +28,8 @@
 		A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */; };
 		A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */; };
 		A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970F421A4ACE5009BA1BA /* UserInfo.swift */; };
+		A2C5D79221AE020F00D511CD /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5D79121AE020F00D511CD /* PostDetail.swift */; };
+		A2C5D79421AE55D300D511CD /* EditUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5D79321AE55D300D511CD /* EditUserTableViewCell.swift */; };
 		A2F9FD6621A47D7C001E08CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */; };
 		A2F9FD6821A47D7C001E08CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */; };
 		A2F9FD6B21A47D7C001E08CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F9FD6921A47D7C001E08CD /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		A2A970F021A4A497009BA1BA /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPIHandler.swift; sourceTree = "<group>"; };
 		A2A970F421A4ACE5009BA1BA /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		A2C5D79121AE020F00D511CD /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		A2C5D79321AE55D300D511CD /* EditUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserTableViewCell.swift; sourceTree = "<group>"; };
 		A2F9FD6221A47D7C001E08CD /* SNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F9FD6521A47D7C001E08CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F9FD6721A47D7C001E08CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 			children = (
 				A26A75ED21A6D55E00DAD38E /* EditUser.storyboard */,
 				A26A75EF21A6D57000DAD38E /* EditUserViewController.swift */,
+				A2C5D79321AE55D300D511CD /* EditUserTableViewCell.swift */,
 			);
 			path = EditUser;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				A2F9FD6921A47D7C001E08CD /* Main.storyboard */,
 				A2A970F221A4A8A0009BA1BA /* FirebaseAPIHandler.swift */,
 				A2A970F421A4ACE5009BA1BA /* UserInfo.swift */,
+				A2C5D79121AE020F00D511CD /* PostDetail.swift */,
 				A2A970D121A48522009BA1BA /* SignIn */,
 				A2A970D221A48552009BA1BA /* SignUp */,
 				A2A970ED21A4A459009BA1BA /* ForgotPassword */,
@@ -424,7 +430,9 @@
 				A2A970F321A4A8A0009BA1BA /* FirebaseAPIHandler.swift in Sources */,
 				A26A75E821A683A900DAD38E /* ChatViewController.swift in Sources */,
 				A26A75F721AD989E00DAD38E /* ChangePasswordViewController.swift in Sources */,
+				A2C5D79421AE55D300D511CD /* EditUserTableViewCell.swift in Sources */,
 				A26A75EB21A6842700DAD38E /* FriendViewController.swift in Sources */,
+				A2C5D79221AE020F00D511CD /* PostDetail.swift in Sources */,
 				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
 				A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */,
