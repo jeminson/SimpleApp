@@ -56,14 +56,22 @@ class SignUpViewController: MRKBaseViewController {
         
         if let obj = userInfo {
             if let _ = obj.firstName, let _ = obj.lastName, let _ = obj.emailId, let _ = obj.address, let _ = obj.phoneNumber, let _ = obj.password {
-                delegate?.saveUserInfo(object: obj, editUserInfo: isEdit)
+//                delegate?.saveUserInfo(object: obj, editUserInfo: isEdit)
+                
                 
                 FirebaseAPIHandler.sharedInstance.signUp(userInfo: obj, img: userImage.image ?? UIImage(named: "default_user")!) { (result, error) in
                     if error == nil {
-                        TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
-                        self.navigationController?.popViewController(animated: true)
+                        
+                        DispatchQueue.main.async {
+                            TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully register the new user", type: .success)
+                            self.navigationController?.popViewController(animated: true)
+                        }
+           
                     } else {
-                        TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                        DispatchQueue.main.async {
+                            TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                        }
+     
                     }
                     
                 }

@@ -50,6 +50,14 @@ class UserViewController: MRKBaseViewController {
         present(AlertController, animated: true, completion: nil)
     }
 
+    @IBAction func mapBarAction(_ sender: UIBarButtonItem) {
+        
+        
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "GMapViewController") as? GMapViewController {
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+    
 }
 
 

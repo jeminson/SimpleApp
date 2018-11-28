@@ -8,6 +8,8 @@
 
 import UIKit
 import TWMessageBarManager
+import SVProgressHUD
+
 
 class SignInViewController: MRKBaseViewController {
     
@@ -16,8 +18,6 @@ class SignInViewController: MRKBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
     }
 
     @IBAction func signUpActionButton(_ sender: UIButton) {
@@ -25,28 +25,28 @@ class SignInViewController: MRKBaseViewController {
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
+    
     @IBAction func signInActionButton(_ sender: UIButton) {
+        
+        SVProgressHUD.show()
         FirebaseAPIHandler.sharedInstance.signIn(email: usernameTextField.text!, passwd: passwordTextField.text!) { (result, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
             if error == nil {
-                
-                
                 DispatchQueue.main.async {
-                    
                     TWMessageBarManager.sharedInstance().showMessage(withTitle: "Success", description: "Successfully logged in", type: .success)
                     self.performSegue(withIdentifier: "LoggedInTabBarController", sender: nil)
                 }
-                
-                print("logged in")
             } else {
-                
                 DispatchQueue.main.async {
                     TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
                 }
-
-                print("error")
             }
         }
     }
+    
     @IBAction func forgotPasswordActionButton(_ sender: UIButton) {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as? ForgotPasswordViewController {
             self.navigationController?.pushViewController(controller, animated: true)

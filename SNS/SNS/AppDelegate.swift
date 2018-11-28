@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+
+let googleKey = "AIzaSyDTw9hGyIyE2r64PQuAkfYY0Dm8XoZjndw"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,11 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        // Temp to let user be signed in
                 if let curUser = Auth.auth().currentUser {
                     let mainStoryboard : UIStoryboard = UIStoryboard(name: "LoggedIn", bundle: nil)
                     let controller = mainStoryboard.instantiateViewController(withIdentifier: "LoggedInTabBarController")
                     self.window?.rootViewController = controller
                 }
+        
+        // Google map
+        GMSServices.provideAPIKey(googleKey)
         
         return true
     }

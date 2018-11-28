@@ -343,7 +343,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4em-bY-HAN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jkv-dF-c3Z"/>
+                    <navigationItem key="navigationItem" id="Jkv-dF-c3Z">
+                        <barButtonItem key="rightBarButtonItem" image="map_icon" id="n2F-3O-Wfs">
+                            <connections>
+                                <action selector="mapBarAction:" destination="WA7-ma-0om" id="GMh-Hp-3te"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="userTableView" destination="AGc-SS-4lB" id="19j-wl-N6k"/>
                     </connections>
@@ -351,6 +357,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzg-eS-D6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3512.8000000000002" y="-1324.5877061469266"/>
+        </scene>
+        <!--GMapViewController-->
+        <scene sceneID="FMI-d0-gVq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="GMapViewController" storyboardName="GMap" referencedIdentifier="GMapViewController" id="mb9-0H-JJH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pGm-yd-h2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4127" y="-1577"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zbv-Kq-T05">
@@ -483,6 +497,7 @@
         <image name="friend_icon_selected" width="25" height="25"/>
         <image name="home_icon" width="25" height="25"/>
         <image name="home_icon_selected" width="25" height="25"/>
+        <image name="map_icon" width="25" height="25"/>
         <image name="setting_icon" width="25" height="25"/>
         <image name="setting_icon_selected" width="25" height="25"/>
         <image name="user_icon" width="25" height="25"/>

@@ -20,6 +20,8 @@
 		A26A75F721AD989E00DAD38E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75F621AD989E00DAD38E /* ChangePasswordViewController.swift */; };
 		A26A75FA21ADEAC400DAD38E /* AddPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A75F921ADEAC400DAD38E /* AddPost.storyboard */; };
 		A26A75FC21ADEBF400DAD38E /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75FB21ADEBF400DAD38E /* AddPostViewController.swift */; };
+		A2863A4921AF4AA10072579A /* GMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2863A4821AF4AA10072579A /* GMap.storyboard */; };
+		A2863A4B21AF4ACB0072579A /* GMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2863A4A21AF4ACB0072579A /* GMapViewController.swift */; };
 		A2A970D021A48288009BA1BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */; };
 		A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A970D321A4856A009BA1BA /* SignUp.storyboard */; };
 		A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A970D521A48577009BA1BA /* SignUpViewController.swift */; };
@@ -57,6 +59,8 @@
 		A26A75F621AD989E00DAD38E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A26A75F921ADEAC400DAD38E /* AddPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPost.storyboard; sourceTree = "<group>"; };
 		A26A75FB21ADEBF400DAD38E /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		A2863A4821AF4AA10072579A /* GMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GMap.storyboard; sourceTree = "<group>"; };
+		A2863A4A21AF4ACB0072579A /* GMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMapViewController.swift; sourceTree = "<group>"; };
 		A2A970CF21A48287009BA1BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2A970D321A4856A009BA1BA /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A2A970D521A48577009BA1BA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			children = (
 				A26A75E421A682C600DAD38E /* UserViewController.swift */,
 				A26A75F121AC660B00DAD38E /* UserTableViewCell.swift */,
+				A2863A4721AF4A8E0072579A /* GMap */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -190,6 +195,15 @@
 				A26A75FB21ADEBF400DAD38E /* AddPostViewController.swift */,
 			);
 			path = AddPost;
+			sourceTree = "<group>";
+		};
+		A2863A4721AF4A8E0072579A /* GMap */ = {
+			isa = PBXGroup;
+			children = (
+				A2863A4821AF4AA10072579A /* GMap.storyboard */,
+				A2863A4A21AF4ACB0072579A /* GMapViewController.swift */,
+			);
+			path = GMap;
 			sourceTree = "<group>";
 		};
 		A2A970D121A48522009BA1BA /* SignIn */ = {
@@ -287,6 +301,7 @@
 				A2F9FD5F21A47D7C001E08CD /* Frameworks */,
 				A2F9FD6021A47D7C001E08CD /* Resources */,
 				E154B38CA597C72E82826F04 /* [CP] Embed Pods Frameworks */,
+				EFC00312A2E536987489F756 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,6 +360,7 @@
 				A2A970F121A4A497009BA1BA /* ForgotPassword.storyboard in Resources */,
 				A2A970D421A4856A009BA1BA /* SignUp.storyboard in Resources */,
 				A26A75EE21A6D55E00DAD38E /* EditUser.storyboard in Resources */,
+				A2863A4921AF4AA10072579A /* GMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +425,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EFC00312A2E536987489F756 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNS/Pods-SNS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,6 +472,7 @@
 				A26A75EB21A6842700DAD38E /* FriendViewController.swift in Sources */,
 				A2C5D79221AE020F00D511CD /* PostDetail.swift in Sources */,
 				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
+				A2863A4B21AF4ACB0072579A /* GMapViewController.swift in Sources */,
 				A2A970D621A48577009BA1BA /* SignUpViewController.swift in Sources */,
 				A2A970F521A4ACE5009BA1BA /* UserInfo.swift in Sources */,
 			);
