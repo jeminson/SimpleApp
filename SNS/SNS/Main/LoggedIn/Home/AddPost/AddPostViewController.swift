@@ -10,7 +10,8 @@ import UIKit
 import UITextView_Placeholder
 
 class AddPostViewController: MRKBaseViewController {
-
+    @IBOutlet weak var navBar: UINavigationBar!
+    
     @IBOutlet weak var contextTextView: UITextView!
     @IBOutlet weak var selectPostImg: UIImageView!
     
@@ -24,6 +25,10 @@ class AddPostViewController: MRKBaseViewController {
         contextTextView.placeholder = "Write a caption..."
         
         imagePicker.delegate = self
+        
+        self.navBar.setBackgroundImage(UIImage(), for: .default)
+        self.navBar.shadowImage = UIImage()
+        self.navBar.isTranslucent = true
     }
     
     @IBAction func postBarButton(_ sender: UIBarButtonItem) {

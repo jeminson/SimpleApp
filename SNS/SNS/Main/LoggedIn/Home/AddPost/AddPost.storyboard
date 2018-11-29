@@ -123,6 +123,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contextTextView" destination="5mz-o0-wGS" id="oUN-HV-gBD"/>
+                        <outlet property="navBar" destination="mIq-ny-SKx" id="He5-9Q-9xu"/>
                         <outlet property="selectPostImg" destination="p5f-nk-r4a" id="tnr-tM-eXV"/>
                         <segue destination="3RR-80-kEW" kind="unwind" identifier="unwindSegue" unwindAction="unwindToHomeVCWithSegue:" id="c9B-Av-TRu"/>
                     </connections>
