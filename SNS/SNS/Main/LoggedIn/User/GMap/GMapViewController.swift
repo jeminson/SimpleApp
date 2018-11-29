@@ -30,14 +30,17 @@ class GMapViewController: MRKBaseViewController {
             let location = CLLocation(latitude: coordinateLatitude, longitude: coordinateLongitude)
             let smallImage = UIImage().resizeimage(image: user.img!, withSize: CGSize(width: 40.0, height: 40.0))
             
-            let marker = GMSMarker()
-            marker.position = location.coordinate
-            marker.title = user.firstName
-            marker.icon = smallImage
-            marker.map = mapView
-            marker.isDraggable = true
+            DispatchQueue.main.async {
+                let marker = GMSMarker()
+                marker.position = location.coordinate
+                marker.title = user.firstName
+                marker.icon = smallImage
+                marker.map = self.mapView
+                marker.isDraggable = true
+                
+                self.mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+            }
             
-            mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
         }
     }
 

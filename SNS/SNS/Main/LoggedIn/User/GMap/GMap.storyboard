@@ -25,10 +25,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3DK-hU-xIE" firstAttribute="leading" secondItem="Qpw-SL-Ba2" secondAttribute="leading" id="1UJ-fx-pLO"/>
-                            <constraint firstItem="3DK-hU-xIE" firstAttribute="top" secondItem="lkG-64-aoM" secondAttribute="top" id="B81-Cc-F10"/>
-                            <constraint firstItem="3DK-hU-xIE" firstAttribute="trailing" secondItem="Qpw-SL-Ba2" secondAttribute="trailing" id="Ed6-wf-Ipa"/>
-                            <constraint firstItem="3DK-hU-xIE" firstAttribute="bottom" secondItem="Qpw-SL-Ba2" secondAttribute="bottom" id="rKd-yi-zqN"/>
+                            <constraint firstItem="3DK-hU-xIE" firstAttribute="bottom" secondItem="Qpw-SL-Ba2" secondAttribute="bottom" id="4hP-V5-5KP"/>
+                            <constraint firstItem="3DK-hU-xIE" firstAttribute="top" secondItem="lkG-64-aoM" secondAttribute="top" id="dE3-rF-RWU"/>
+                            <constraint firstItem="3DK-hU-xIE" firstAttribute="trailing" secondItem="Qpw-SL-Ba2" secondAttribute="trailing" id="h7j-SO-ELR"/>
+                            <constraint firstItem="3DK-hU-xIE" firstAttribute="leading" secondItem="Qpw-SL-Ba2" secondAttribute="leading" id="vqf-Fi-Bqp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qpw-SL-Ba2"/>
                     </view>
