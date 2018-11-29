@@ -18,5 +18,7 @@ struct UserInfo {
     var phoneNumber: String?
     var password: String?
     var img: UIImage?
+    var latitude : String?
+    var longitude : String?
 }
 

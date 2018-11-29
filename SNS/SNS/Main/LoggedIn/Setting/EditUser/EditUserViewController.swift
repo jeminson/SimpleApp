@@ -19,12 +19,14 @@ class EditUserViewController: MRKBaseViewController {
 
         title = "EDIT USER"
         
+        /*
         FirebaseAPIHandler.sharedInstance.fetchCurrentUserData() { (result, error) in
             if error == nil {
                 print(result!)
 
             }
         }
+ */
 
     }
 

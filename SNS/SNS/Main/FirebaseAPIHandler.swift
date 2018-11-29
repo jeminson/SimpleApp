@@ -96,7 +96,7 @@ extension FirebaseAPIHandler {
         }
     }
     
-    
+/*
     func fetchCurrentUserData(completion: @escaping completionHandler) {
         let currentUser = Auth.auth().currentUser?.uid
     
@@ -115,7 +115,7 @@ extension FirebaseAPIHandler {
 //                                             phoneNumber: nil,
 //                                             password: nil,
 //                                             img: nil)
-                    
+//
                     let userModel = UserInfo.init(id: nil,
                                                   firstName: user["FirstName"] as? String ?? "",
                                                   lastName: user["LastName"] as? String ?? "",
@@ -131,6 +131,7 @@ extension FirebaseAPIHandler {
             }
         }
     }
+ */
     
     func fetchTheData(completion: @escaping completionHandler) {
 
@@ -144,20 +145,23 @@ extension FirebaseAPIHandler {
             if error == nil {
                 var userArray : [UserInfo] = []
 
-                if let user = snapshot.value as? [String: [String: Any]] {
+                if let users = snapshot.value as? [String: [String: Any]] {
                         
-                    for item in user {
-                        var userModel = UserInfo.init(id: item.key,
-                                                      firstName: item.value["FirstName"] as? String,
-                                                      lastName: item.value["LastName"] as? String,
-                                                      emailId: item.value["EmailId"] as? String,
-                                                      address: item.value["Address"] as? String,
-                                                      phoneNumber: item.value["Phone Number"] as? String,
+                    for user in users {
+                        let coordinate = user.value["Coordinate"] as? [String:String]
+                        var userModel = UserInfo.init(id: user.key,
+                                                      firstName: user.value["FirstName"] as? String,
+                                                      lastName: user.value["LastName"] as? String,
+                                                      emailId: user.value["EmailId"] as? String,
+                                                      address: user.value["Address"] as? String,
+                                                      phoneNumber: user.value["Phone Number"] as? String,
                                                       password: nil,
-                                                      img: nil)
+                                                      img: nil,
+                                                      latitude: coordinate?["Latitude"],
+                                                      longitude: coordinate?["Longitude"])
                         
                         fetchUserComponentsGroup.enter()
-                        self.getImage(userID: item.key, completion: { (img, error) in
+                        self.getImage(userID: user.key, completion: { (img, error) in
                             if error == nil && !(img == nil) {
                                 userModel.img = img as? UIImage
                             }

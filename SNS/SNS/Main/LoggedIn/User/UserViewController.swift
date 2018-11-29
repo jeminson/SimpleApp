@@ -20,6 +20,10 @@ class UserViewController: MRKBaseViewController {
 
         title = "USER"
         
+        fetchUser()
+    }
+    
+    func fetchUser() {
         SVProgressHUD.show()
         FirebaseAPIHandler.sharedInstance.fetchTheData { (result, error) in
             DispatchQueue.main.async {
@@ -34,8 +38,10 @@ class UserViewController: MRKBaseViewController {
                 }
             }
         }
-        
     }
+    
+    
+    
     @IBAction func addFriendButton(_ sender: UIButton) {
         
         let AlertController = UIAlertController(title: "Add Friend", message: "Do you want to add as your friend?", preferredStyle: .alert)
@@ -52,9 +58,15 @@ class UserViewController: MRKBaseViewController {
 
     @IBAction func mapBarAction(_ sender: UIBarButtonItem) {
         
-        
+        SVProgressHUD.show()
         if let controller = storyboard?.instantiateViewController(withIdentifier: "GMapViewController") as? GMapViewController {
-            self.navigationController?.pushViewController(controller, animated: true)
+            
+            controller.userInfoArray = userInfoArray
+            
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
         }
     }
     
