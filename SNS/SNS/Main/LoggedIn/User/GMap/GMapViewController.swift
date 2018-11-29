@@ -10,6 +10,8 @@ import UIKit
 import GoogleMaps
 
 
+let RECTNOTEZomOut: CGRect = CGRect(x: 0, y: 0, width: 40, height: 40)
+
 class GMapViewController: MRKBaseViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
@@ -34,9 +36,15 @@ class GMapViewController: MRKBaseViewController {
                 let marker = GMSMarker()
                 marker.position = location.coordinate
                 marker.title = user.firstName
-                marker.icon = smallImage
+                let imgView = UIImageView(frame: RECTNOTEZomOut)
+                imgView.layer.borderWidth = 2
+                imgView.layer.borderColor = UIColor.orange.cgColor
+                imgView.layer.cornerRadius = imgView.frame.height/2
+                imgView.layer.masksToBounds = false
+                imgView.clipsToBounds = true
+                imgView.image = user.img!
+                marker.iconView = imgView
                 marker.map = self.mapView
-                marker.isDraggable = true
                 
                 self.mapView.camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
             }
