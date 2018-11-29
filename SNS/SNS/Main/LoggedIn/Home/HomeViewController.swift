@@ -16,6 +16,9 @@ class HomeViewController: MRKBaseViewController {
         title = "HOME"
     }
     
+    @IBAction func unwindToHomeVC(segue: UIStoryboardSegue) {
+        
+    }
 
     @IBAction func addPostBarButton(_ sender: UIBarButtonItem) {
         DispatchQueue.main.async {

@@ -27,10 +27,13 @@ class AddPostViewController: MRKBaseViewController {
     }
     
     @IBAction func postBarButton(_ sender: UIBarButtonItem) {
+        print("post")
     }
     
     @IBAction func cancelBarButton(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "unwindSegue", sender: self)
+        }
     }
     
     @IBAction func imgSelectBtn(_ sender: UIButton) {

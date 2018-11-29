@@ -187,7 +187,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="rLK-U9-A6f" kind="show" identifier="AddPostViewController" id="83Z-tb-9Ku"/>
+                        <segue destination="rLK-U9-A6f" kind="presentation" identifier="AddPostViewController" id="83Z-tb-9Ku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvm-KD-Z6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -346,7 +346,7 @@
                     <navigationItem key="navigationItem" id="Jkv-dF-c3Z">
                         <barButtonItem key="rightBarButtonItem" image="map_icon" id="n2F-3O-Wfs">
                             <connections>
-                                <action selector="mapBarAction:" destination="WA7-ma-0om" id="GMh-Hp-3te"/>
+                                <action selector="mapBarAction:" destination="WA7-ma-0om" id="dKh-Xc-tE1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
