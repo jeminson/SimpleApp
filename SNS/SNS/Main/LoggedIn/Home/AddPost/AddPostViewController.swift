@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+import TWMessageBarManager
 import UITextView_Placeholder
 
 class AddPostViewController: MRKBaseViewController {
@@ -32,7 +34,23 @@ class AddPostViewController: MRKBaseViewController {
     }
     
     @IBAction func postBarButton(_ sender: UIBarButtonItem) {
-        print("post")
+        
+        SVProgressHUD.show()
+        FirebaseAPIHandler.sharedInstance.addPost(postString: contextTextView.text, postImg: selectPostImg.image!) { (result, error) in
+            DispatchQueue.main.async{
+                SVProgressHUD.dismiss()
+            }
+            if error == nil{
+                DispatchQueue.main.async {
+                    TWMessageBarManager.sharedInstance().showMessage(withTitle: "Sucess", description: "Successfully posted", type: .success)
+                    self.dismiss(animated: true)
+                }
+            }else{
+                DispatchQueue.main.async {
+                    TWMessageBarManager.sharedInstance().showMessage(withTitle: "Error", description: error?.localizedDescription, type: .error)
+                }
+            }
+        }
     }
     
     @IBAction func cancelBarButton(_ sender: UIBarButtonItem) {

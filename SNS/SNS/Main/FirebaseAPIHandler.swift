@@ -20,6 +20,7 @@ class FirebaseAPIHandler: NSObject {
 
     var databaseRef : DatabaseReference! = Database.database().reference().child("USERS")
     var storageRef: StorageReference! = Storage.storage().reference()
+    var postRef: DatabaseReference! = Database.database().reference().child("POST")
 }
 
 extension FirebaseAPIHandler {
@@ -195,5 +196,66 @@ extension FirebaseAPIHandler {
         
         try!  Auth.auth().signOut()
     }
+    
+
+    func getCurrentUid() -> String {
+        return Auth.auth().currentUser?.uid ?? ""
+    }
+    
+    func addPost(postString: String, postImg: UIImage, completion: @escaping completionHandler) {
+        let postKey = postRef.childByAutoId().key
+        
+        let dg = DispatchGroup()
+
+        postRef.child(postKey!).setValue(["description": postString,
+                                          "userId": getCurrentUid()], withCompletionBlock: { (error, ref) in
+                                            if error == nil {
+                                                dg.enter()
+                                                self.addPostStorage(img: postImg, postKey: postKey!, completion: { (err) in
+                                                    if err == nil{
+                                                        dg.leave()
+                                                    }else{
+                                                        completion(nil, err)
+                                                    }
+                                                })
+                                                dg.enter()
+                                                self.addPostRefCurrentUser(postKey: postKey ?? "", completion: { (err) in
+                                                    if err == nil{
+                                                        dg.leave()
+                                                    }else{
+                                                        completion(nil, err)
+                                                    }
+                                                })
+                                                dg.notify(queue: .main){
+                                                    print("Print hopefully once!")
+                                                    completion(nil, nil)
+                                                }
+                                            } else {
+                                                print(error)
+                                            }
+                                            
+        })
+    }
+    
+    func addPostRefCurrentUser(postKey:String, completion: @escaping (Error?)->()){
+        databaseRef.child(getCurrentUid()).child("POST").updateChildValues([postKey: "postKey"]) { (err, dbref) in
+            completion(err)
+        }
+    }
+    
+    func addPostStorage(img: UIImage, postKey: String, completion: @escaping (Error?)->()){
+        let data = img.jpeg(UIImage.JPEGQuality.lowest)
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        let imagename = "Posts/\(postKey)"
+        storageRef.child(imagename).putData(data!, metadata: metaData) { (storMetaData, err) in
+            if err == nil{
+                completion(nil)
+            }else{
+                completion(err)
+            }
+        }
+    }
+
     
 }
