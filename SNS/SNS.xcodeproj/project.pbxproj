@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2179CB921B1B18500701F15 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2179CB821B1B18500701F15 /* HomeTableViewCell.swift */; };
 		A26A75DC21A67F0200DAD38E /* LoggedIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A75DB21A67F0200DAD38E /* LoggedIn.storyboard */; };
 		A26A75DF21A67FC600DAD38E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75DE21A67FC600DAD38E /* HomeViewController.swift */; };
 		A26A75E221A67FFA00DAD38E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A75E121A67FFA00DAD38E /* SettingViewController.swift */; };
@@ -46,6 +47,7 @@
 		17536D8BB136CEB63323A930 /* Pods_SNS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF1758A4A0BDD3B3C8B4777 /* Pods-SNS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.release.xcconfig"; sourceTree = "<group>"; };
 		948B46B9EDC8775D8447FDE2 /* Pods-SNS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNS/Pods-SNS.debug.xcconfig"; sourceTree = "<group>"; };
+		A2179CB821B1B18500701F15 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		A26A75DB21A67F0200DAD38E /* LoggedIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedIn.storyboard; sourceTree = "<group>"; };
 		A26A75DE21A67FC600DAD38E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A26A75E121A67FFA00DAD38E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A26A75DE21A67FC600DAD38E /* HomeViewController.swift */,
+				A2179CB821B1B18500701F15 /* HomeTableViewCell.swift */,
 				A26A75F821ADEA5900DAD38E /* AddPost */,
 			);
 			path = Home;
@@ -470,6 +473,7 @@
 				A26A75F721AD989E00DAD38E /* ChangePasswordViewController.swift in Sources */,
 				A2C5D79421AE55D300D511CD /* EditUserTableViewCell.swift in Sources */,
 				A26A75EB21A6842700DAD38E /* FriendViewController.swift in Sources */,
+				A2179CB921B1B18500701F15 /* HomeTableViewCell.swift in Sources */,
 				A2C5D79221AE020F00D511CD /* PostDetail.swift in Sources */,
 				A2A970EF21A4A474009BA1BA /* ForgotPasswordViewController.swift in Sources */,
 				A2863A4B21AF4ACB0072579A /* GMapViewController.swift in Sources */,

@@ -96,43 +96,7 @@ extension FirebaseAPIHandler {
             
         }
     }
-    
-/*
-    func fetchCurrentUserData(completion: @escaping completionHandler) {
-        let currentUser = Auth.auth().currentUser?.uid
-    
-        databaseRef.child(currentUser!).observeSingleEvent(of: .value) { (snapshot, error) in
-            if error == nil {
-                
-                if let user = snapshot.value as? [String:Any] {
-//                    let firstName = user["FirstName"] as? String ?? ""
-//                    let lastName = user["LastName"] as? String ?? ""
-//
-//                    let userModel = UserInfo(id: nil,
-//                                             firstName: firstName,
-//                                             lastName: lastName,
-//                                             emailId: nil,
-//                                             address: nil,
-//                                             phoneNumber: nil,
-//                                             password: nil,
-//                                             img: nil)
-//
-                    let userModel = UserInfo.init(id: nil,
-                                                  firstName: user["FirstName"] as? String ?? "",
-                                                  lastName: user["LastName"] as? String ?? "",
-                                                  emailId: user["EmailId"] as? String ?? "",
-                                                  address: user["Address"] as? String ?? "",
-                                                  phoneNumber: user["Phone Number"] as? String ?? "",
-                                                  password: nil,
-                                                  img: nil)
-                    completion(userModel, nil)
-                } else {
-                    completion(nil, error as? Error)
-                }
-            }
-        }
-    }
- */
+
     
     func fetchTheData(completion: @escaping completionHandler) {
 
@@ -257,5 +221,8 @@ extension FirebaseAPIHandler {
         }
     }
 
+    
+    
+    
     
 }
