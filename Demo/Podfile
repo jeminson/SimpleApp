@@ -10,5 +10,7 @@ target 'Demo' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'TWMessageBarManager'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
