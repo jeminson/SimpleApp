@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.11.1):
+    - Fabric (~> 1.8.1)
+  - Fabric (1.8.2)
   - Firebase/Auth (5.12.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.5)
@@ -68,6 +71,8 @@ PODS:
   - TWMessageBarManager (1.8.1)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -75,6 +80,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -90,6 +97,8 @@ SPEC REPOS:
     - TWMessageBarManager
 
 SPEC CHECKSUMS:
+  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   Firebase: 9190018e296139d938b99521cde0c15a6e8d2946
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
   FirebaseAuth: 9299ab178271bec7426967b05b2718bb6fc31f17
@@ -104,6 +113,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   TWMessageBarManager: fd84e7948ba7968a2b5d9454859135761214ec56
 
-PODFILE CHECKSUM: b56634d5529b8db64c3801dfbd0d48c7e358183c
+PODFILE CHECKSUM: 9172fcd565528b15e3cf9e099b0168dd57c05612
 
 COCOAPODS: 1.5.3
